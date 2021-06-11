@@ -22,7 +22,6 @@ module.exports = (app) => {
 
   app.get('/api/backers', backersController.getBackers);
 
-
   app.get('*', (req, res) => {
 		res.redirect('/');
 	});
