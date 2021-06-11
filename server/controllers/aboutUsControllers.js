@@ -1,11 +1,11 @@
 const keystone = require('keystone');
 
-const backers = keystone.list('banner');
+const backers = keystone.list('sobre-nós');
 
 module.exports = {
 
-  getbannerController (req, res) {
-    banner.model.find((err, items) => {
+  getaboutUsController (req, res) {
+    aboutUs.model.find((err, items) => {
       if (err) {
         console.log(err);
         res.status(500).send('DB Error');
