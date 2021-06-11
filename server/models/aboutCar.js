@@ -2,28 +2,34 @@ const keystone = require('keystone');
 
 const { Types } = keystone.Field;
 
-const aboutCar = new keystone.List('AboutCar');
+const aboutCar = new keystone.List('AboutCar', {
+    label: 'Sobre o Carro',
+    autocreate: true,
+    nocreate: true,
+    nodelete: true,
+    defaultColumns: 'name, description, image',
+});
 
 aboutCar.add({
-    key: {
-        type: Types.Text,
-        initial: false,
-        label: 'Identificador',
-        default: 'Ex.: Padrão 1'
-      },
-
+    name: {
+        type: String,
+        required: false,
+        initial: true,
+        label: 'Nome ID',
+    },
+    
     description: {
         type: Types.Textarea,
-        label: 'Descrição:',
-        note:'Descreva sobre o Carro',
+        label: 'Descrição',
+        note:'Sobre o Carro',
         required: true,
         initial: true,
         index: true,
     },
 
     image: {
-        type: Types.CloudinaryImages,
-        label: 'Imagem:',
+        type: Types.CloudinaryImage,
+        label: 'Imagem',
         note: 'Insira uma imagem',
         required: true,
         initial: true,

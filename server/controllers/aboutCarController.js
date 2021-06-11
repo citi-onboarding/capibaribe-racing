@@ -4,7 +4,7 @@ const AboutCar = keystone.list('AboutCar');
 
 module.exports = {
 
-  getAboutCarController (req, res) {
+  getAboutCar (req, res) {
     AboutCar.model.find((err, items) => {
       if (err) {
         console.log(err);
