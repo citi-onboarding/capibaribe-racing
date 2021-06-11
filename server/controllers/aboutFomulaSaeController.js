@@ -4,7 +4,7 @@ const AboutFormulaSae = keystone.list('AboutFormulaSae');
 
 module.exports = {
 
-  getAboutFormulaSaeController (req, res) {
+  getAboutFormulaSae (req, res) {
     AboutFormulaSae.model.find((err, items) => {
       if (err) {
         console.log(err);
