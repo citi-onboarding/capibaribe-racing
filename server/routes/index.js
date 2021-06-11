@@ -3,7 +3,6 @@ const keystone = require('keystone');
 const cors = require('cors');
 const postController = require('../controllers/postController.js');
 const aboutCarController = require('../controllers/aboutCarController.js');
-const aboutFormulaSaeController = require('../controllers/aboutFomulaSaeController');
 
 
 const Post = keystone.list('Posts');
@@ -18,8 +17,6 @@ module.exports = (app) => {
   app.get('/api/posts', postController.getPost);
 
   app.get('/api/about-car', aboutCarController.getAboutCarController);
-
-  app.get('/api/about-formula-sae', aboutFormulaSaeController.getAboutFormulaSaeController);
 
   app.get('*', (req, res) => {
 		res.redirect('/');
