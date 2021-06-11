@@ -2,7 +2,7 @@ const path = require('path');
 const keystone = require('keystone');
 const cors = require('cors');
 const postController = require('../controllers/postController.js');
-const socialController = require('../controllers/socialFooterController.js');
+const socialFooterController = require('../controllers/socialFooterController.js');
 
 
 const Post = keystone.list('Posts');
