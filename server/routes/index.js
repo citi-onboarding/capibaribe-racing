@@ -16,7 +16,7 @@ module.exports = (app) => {
 
   app.get('/api/posts', postController.getPost);
 
-  app.get('/api/about-car', aboutCarController.getAboutCarController);
+  app.get('/api/about-car', aboutCarController.getAboutCar);
 
   app.get('*', (req, res) => {
 		res.redirect('/');
