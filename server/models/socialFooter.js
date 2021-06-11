@@ -3,7 +3,7 @@ const keystone = require('keystone');
 const { Types } = keystone.Field;
 
 const socialNetworks = new keystone.List('SocialNetworks', {
-    label:'Redes Sociais',
+    label:'Footer',
     autocreate: true,
     nocreate: true,
     nodelete: true,
@@ -16,7 +16,7 @@ socialNetworks.add({
     type: String,
     required: false,
     initial: true,
-    label: 'Nome ID',
+    label: 'Identificador',
     },
 
     social: {
