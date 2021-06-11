@@ -15,7 +15,7 @@ aboutCar.add({
         type: String,
         required: false,
         initial: true,
-        label: 'Nome ID',
+        label: 'Identificador',
     },
     
     description: {
