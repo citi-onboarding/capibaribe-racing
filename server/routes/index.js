@@ -1,12 +1,15 @@
 const path = require('path');
 const keystone = require('keystone');
 const cors = require('cors');
+
 const postController = require('../controllers/postController.js');
-const aboutCarController = require('../controllers/aboutCarController.js');
-const aboutFormulaSaeController = require('../controllers/aboutFomulaSaeController');
+
+const backersController = require('../controllers/backersController.js');
 
 
-const Post = keystone.list('Posts');
+
+
+//const Post = keystone.list('Posts');
 
 module.exports = (app) => {
   app.use(cors());
@@ -17,9 +20,8 @@ module.exports = (app) => {
 
   app.get('/api/posts', postController.getPost);
 
-  app.get('/api/about-car', aboutCarController.getAboutCarController);
+  app.get('/api/backers', backersController.getBackers);
 
-  app.get('/api/about-formula-sae', aboutFormulaSaeController.getAboutFormulaSaeController);
 
   app.get('*', (req, res) => {
 		res.redirect('/');
