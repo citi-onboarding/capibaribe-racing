@@ -2,11 +2,33 @@ const keystone = require('keystone');
 
 const { Types } = keystone.Field;
 
-const Post = new keystone.List('sobre-nós');
+const aboutUs = new keystone.List('sobre-nós',{
+  label:'Sobre nós',
+  nodelete: true,
+  nocreate: true,
+  autocreate: true,
+  defaultColumns: 'name, Título, Descrição, Conteúdos, Visão, Missão, Valores',
+});
 
-Post.add({
-  description: {
-    type: Types.TextArray,
+aboutUs.add({
+  name: {
+    type: String,
+    required: false,
+    initial: true,
+    label: 'Identificador',
+  },
+
+  Título: {
+    type: Types.Text,
+    label: 'Título:',
+    note:'Insira o título',
+    required: true,
+    initial: true,
+    index: true,
+  },
+
+  Descrição: {
+    type: Types.Textarea,
     label: 'Descrição:',
     note:'Insira a descrição',
     required: true,
@@ -14,27 +36,27 @@ Post.add({
     index: true,
   },
 
-  contents:{
-    type: Types.TextArray,
-    label: 'conteudos:',
+  Conteúdos:{
+    type: Types.Text,
+    label: 'Conteúdos:',
     note:'Insira o link dos conteúdos',
     required: true,
     initial: true,
     index: true,
   },
 
-  visao: {
-    title: {
-      type: Types.TextArray,
-      label: 'Título da visão:',
+  Visão: {
+    Título: {
+      type: Types.Text,
+      label: 'Título: Visão:',
       note:'Insira o título',
       required: true,
       initial: true,
       index: true,
     },
 
-    description: {
-      type: Types.TextArray,
+    Descrição: {
+      type: Types.Textarea,
       label: 'Descrição da visão:',
       note:'Insira a descrição',
       required: true,
@@ -42,27 +64,27 @@ Post.add({
       index: true,
     },
 
-    icon: {
-      type: Types.CloudinaryImages,
-      label: 'Imagem da visão:',
+    Ícone: {
+      type: Types.CloudinaryImage,
+      label: 'Ícone da visão:',
       note: 'Insira o ícone',
-      required: true,
       initial: true,
+      required: true,
     },
   },
 
-  missao: {
-    title: {
-      type: Types.TextArray,
-      label: 'Título da missão:',
+  Missão: {
+    Título: {
+      type: Types.Text,
+      label: 'Título: Missão:',
       note:'Insira o título',
       required: true,
       initial: true,
       index: true,
     },
 
-    description: {
-      type: Types.TextArray,
+    Descrição: {
+      type: Types.Textarea,
       label: 'Descrição da missão:',
       note:'Insira a descrição',
       required: true,
@@ -70,37 +92,37 @@ Post.add({
       index: true,
     },
 
-    icon: {
-      type: Types.CloudinaryImages,
-      label: 'Imagem da missão:',
+    Ícone: {
+      type: Types.CloudinaryImage,
+      label: 'Ícone da missão:',
       note: 'Insira o ícone',
-      required: true,
       initial: true,
+      required: true,
     },
   },
 
-  valores: {
-    title: {
-      type: Types.TextArray,
-      label: 'Título do valor:',
+  Valores: {
+    Título: {
+      type: Types.Text,
+      label: 'Título: Valor:',
       note:'Insira o título',
       required: true,
       initial: true,
       index: true,
     },
 
-    description: {
-      type: Types.TextArray,
+    Descrição: {
+      type: Types.Textarea,
       label: 'Descrição do valor:',
       note:'Insira a descrição',
-      required: true,
+      required: [true, 'sksk'],
       initial: true,
       index: true,
     },
 
-    icon: {
-      type: Types.CloudinaryImages,
-      label: 'Imagem do valor:',
+    Ícone: {
+      type: Types.CloudinaryImage,
+      label: 'Ícone do valor:',
       note: 'Insira o ícone',
       required: true,
       initial: true,
@@ -109,4 +131,4 @@ Post.add({
 
 });
 
-Post.register();
+aboutUs.register();
