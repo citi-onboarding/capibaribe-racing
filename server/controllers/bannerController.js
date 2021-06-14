@@ -1,6 +1,6 @@
 const keystone = require('keystone');
 
-const backers = keystone.list('banner');
+const banner = keystone.list('Banner');
 
 module.exports = {
 

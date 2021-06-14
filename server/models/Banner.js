@@ -1,36 +1,47 @@
 const keystone = require('keystone');
-
 const { Types } = keystone.Field;
 
-const Post = new keystone.List('banner');
+const banner = new keystone.List('Banner',{
+  autocreate: true,
+  nodelete: true,
+  nocreate: true,
+  label:'Banner',
+  defaultColumns: 'name, Título, Descrição',
+});
 
-Post.add({
+banner.add({
+  name: {
+    type: String,
+    required: false,
+    initial: true,
+    label: 'Identificador',
+  },
 
-  title: {
-      type: Types.TextArray,
-      label: 'Banner:',
+  Título: {
+      type: Types.Text,
+      label: 'Título',
       note:'Insira o título',
       required: true,
       initial: true,
       index: true,
   },
 
-  description: {
-    type: Types.TextArray,
+  Descrição: {
+    type: Types.Textarea,
     label: 'Descrição do banner:',
-    note:'Insira a descrição do banner',
+    note:'Insira a descrição que ficará em frente ao banner',
     required: true,
     initial: true,
     index: true,
   },
 
-  image: {
-    type: Types.CloudinaryImages,
+  Imagem: {
+    type: Types.CloudinaryImage,
     label: 'Imagem:',
-    note: 'Insira uma imagem',
+    note: 'Insira uma imagem do banner',
     required: true,
     initial: true,
   },
 });
 
-Post.register();
+banner.register();
