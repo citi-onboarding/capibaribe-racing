@@ -2,7 +2,7 @@ const keystone = require('keystone');
 
 const { Types } = keystone.Field;
 
-const aboutUs = new keystone.List('sobre-nós',{
+const aboutUs = new keystone.List('about-us',{
   label:'Sobre nós',
   nodelete: true,
   nocreate: true,
@@ -18,7 +18,7 @@ aboutUs.add({
     label: 'Identificador',
   },
 
-  Título: {
+  title: {
     type: Types.Text,
     label: 'Título:',
     note:'Insira o título',
@@ -27,7 +27,7 @@ aboutUs.add({
     index: true,
   },
 
-  Descrição: {
+  description: {
     type: Types.Textarea,
     label: 'Descrição:',
     note:'Insira a descrição',
@@ -36,7 +36,7 @@ aboutUs.add({
     index: true,
   },
 
-  Conteúdos:{
+  content:{
     type: Types.Text,
     label: 'Conteúdos:',
     note:'Insira o link dos conteúdos',
@@ -45,17 +45,17 @@ aboutUs.add({
     index: true,
   },
 
-  Visão: {
-    Título: {
+  vision: {
+    title: {
       type: Types.Text,
-      label: 'Título: Visão:',
+      label: 'Visão:',
       note:'Insira o título',
       required: true,
       initial: true,
       index: true,
     },
 
-    Descrição: {
+    description: {
       type: Types.Textarea,
       label: 'Descrição da visão:',
       note:'Insira a descrição',
@@ -64,7 +64,7 @@ aboutUs.add({
       index: true,
     },
 
-    Ícone: {
+    icon: {
       type: Types.CloudinaryImage,
       label: 'Ícone da visão:',
       note: 'Insira o ícone',
@@ -73,17 +73,17 @@ aboutUs.add({
     },
   },
 
-  Missão: {
-    Título: {
+  mission: {
+    title: {
       type: Types.Text,
-      label: 'Título: Missão:',
+      label: 'Missão:',
       note:'Insira o título',
       required: true,
       initial: true,
       index: true,
     },
 
-    Descrição: {
+    description: {
       type: Types.Textarea,
       label: 'Descrição da missão:',
       note:'Insira a descrição',
@@ -92,7 +92,7 @@ aboutUs.add({
       index: true,
     },
 
-    Ícone: {
+    icon: {
       type: Types.CloudinaryImage,
       label: 'Ícone da missão:',
       note: 'Insira o ícone',
@@ -101,17 +101,17 @@ aboutUs.add({
     },
   },
 
-  Valores: {
-    Título: {
+  values: {
+    title: {
       type: Types.Text,
-      label: 'Título: Valor:',
+      label: 'Valor:',
       note:'Insira o título',
       required: true,
       initial: true,
       index: true,
     },
 
-    Descrição: {
+    description: {
       type: Types.Textarea,
       label: 'Descrição do valor:',
       note:'Insira a descrição',
@@ -120,7 +120,7 @@ aboutUs.add({
       index: true,
     },
 
-    Ícone: {
+    icon: {
       type: Types.CloudinaryImage,
       label: 'Ícone do valor:',
       note: 'Insira o ícone',
