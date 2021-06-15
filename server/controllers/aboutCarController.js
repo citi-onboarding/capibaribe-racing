@@ -1,11 +1,11 @@
 const keystone = require('keystone');
 
-const Post = keystone.list('Posts');
+const AboutCar = keystone.list('AboutCar');
 
 module.exports = {
 
-  getPost (req, res) {
-    Post.model.find((err, items) => {
+  getAboutCar(req, res) {
+    AboutCar.model.find((err, items) => {
       if (err) {
         console.log(err);
         res.status(500).send('DB Error');
