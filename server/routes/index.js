@@ -1,6 +1,7 @@
 const path = require('path');
 const keystone = require('keystone');
 const cors = require('cors');
+const postController = require('../controllers/postController');
 const bannerController = require('../controllers/bannerController');
 
 module.exports = (app) => {
@@ -11,6 +12,7 @@ module.exports = (app) => {
   });
 
   app.get('/api/banner', bannerController.getbannerController);
+  app.get('/api/posts', postController.getPost);
 
   app.get('*', (req, res) => {
 		res.redirect('/');

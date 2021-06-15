@@ -1,12 +1,12 @@
 const keystone = require('keystone');
 const { Types } = keystone.Field;
 
-const banner = new keystone.List('Banner',{
+const banner = new keystone.List('banner',{
   autocreate: true,
   nodelete: true,
   nocreate: true,
   label:'Banner',
-  defaultColumns: 'name, Título, Descrição',
+  defaultColumns: 'name, title, description, image',
 });
 
 banner.add({
@@ -17,7 +17,7 @@ banner.add({
     label: 'Identificador',
   },
 
-  Título: {
+  title: {
       type: Types.Text,
       label: 'Título',
       note:'Insira o título',
@@ -26,7 +26,7 @@ banner.add({
       index: true,
   },
 
-  Descrição: {
+  description: {
     type: Types.Textarea,
     label: 'Descrição do banner:',
     note:'Insira a descrição que ficará em frente ao banner',
@@ -35,7 +35,7 @@ banner.add({
     index: true,
   },
 
-  Imagem: {
+  image: {
     type: Types.CloudinaryImage,
     label: 'Imagem:',
     note: 'Insira uma imagem do banner',
