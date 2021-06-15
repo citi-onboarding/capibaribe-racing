@@ -1,10 +1,7 @@
 const path = require('path');
 const keystone = require('keystone');
 const cors = require('cors');
-const postController = require('../controllers/postController');
 const aboutUsController = require('../controllers/aboutUsControllers');
-
-const Post = keystone.list('Posts');
 
 module.exports = (app) => {
   app.use(cors());
@@ -13,7 +10,6 @@ module.exports = (app) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
   });
 
-  app.get('/api/posts', postController.getPost);
   app.get('/api/aboutUs', aboutUsController.getaboutUsController);
 
   app.get('*', (req, res) => {

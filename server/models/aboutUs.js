@@ -115,7 +115,7 @@ aboutUs.add({
       type: Types.Textarea,
       label: 'Descrição do valor:',
       note:'Insira a descrição',
-      required: [true, 'sksk'],
+      required: true,
       initial: true,
       index: true,
     },
