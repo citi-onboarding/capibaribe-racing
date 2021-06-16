@@ -1,0 +1,70 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+:root {
+    --color-background-page: #1F1F1F;
+    --color-primary:#800000;
+    --color-secondary: #FFD31A;
+    --color-font-global: #BDBDBD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--color-background-page);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+h1 {
+    font-size: 5.5rem;
+    font-weight: 500;
+    line-height: 6.7rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 90vw;
+}
+
+.fontDescription {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    color: var(--color-font-global);
+}
+
+.fonteTitleSection {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 5.85rem;
+    color: var(--color-font-global);
+}
+
+@font-face{
+    font-family: 'Montserrat', sans-serif;
+    src: url('./assets/Montserrat-Regular.ttf');
+}
