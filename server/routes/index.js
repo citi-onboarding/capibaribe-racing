@@ -3,11 +3,9 @@ const keystone = require('keystone');
 const cors = require('cors');
 
 const aboutFormulaSaeController = require('../controllers/aboutFomulaSaeController.js');
-
 const socialFooterController = require('../controllers/socialFooterController.js');
-
+const bannerController = require('../controllers/bannerController');
 const aboutCarController = require('../controllers/aboutCarController.js');
-
 const backersController = require('../controllers/backersController.js');
 
 module.exports = (app) => {
@@ -18,15 +16,13 @@ module.exports = (app) => {
   });
 
   app.get('/api/about-formula-sae', aboutFormulaSaeController.getAboutFormulaSae);
-  
+  app.get('/api/banner', bannerController.getbannerController);
   app.get('/api/social-networks', socialFooterController.getSocialNetworks);
-
   app.get('/api/about-car', aboutCarController.getAboutCar);
-
   app.get('/api/backers', backersController.getBackers);
 
   app.get('*', (req, res) => {
 		res.redirect('/');
 	});
-  
+
 };
