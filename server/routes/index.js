@@ -4,6 +4,8 @@ const cors = require('cors');
 
 const aboutCarController = require('../controllers/aboutCarController.js');
 
+const backersController = require('../controllers/backersController.js');
+
 module.exports = (app) => {
   app.use(cors());
 
@@ -12,6 +14,8 @@ module.exports = (app) => {
   });
 
   app.get('/api/about-car', aboutCarController.getAboutCar);
+
+  app.get('/api/backers', backersController.getBackers);
 
   app.get('*', (req, res) => {
 		res.redirect('/');
