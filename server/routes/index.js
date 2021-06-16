@@ -2,6 +2,7 @@ const path = require('path');
 const keystone = require('keystone');
 const cors = require('cors');
 
+const aboutFormulaSaeController = require('../controllers/aboutFomulaSaeController.js');
 const socialFooterController = require('../controllers/socialFooterController.js');
 const bannerController = require('../controllers/bannerController');
 const aboutCarController = require('../controllers/aboutCarController.js');
@@ -14,6 +15,7 @@ module.exports = (app) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
   });
 
+  app.get('/api/about-formula-sae', aboutFormulaSaeController.getAboutFormulaSae);
   app.get('/api/banner', bannerController.getbannerController);
   app.get('/api/social-networks', socialFooterController.getSocialNetworks);
   app.get('/api/about-car', aboutCarController.getAboutCar);
