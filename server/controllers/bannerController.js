@@ -1,11 +1,11 @@
 const keystone = require('keystone');
 
-const socialNetworks = keystone.list('SocialNetworks');
+const banner = keystone.list('banner');
 
 module.exports = {
 
-  getSocialNetworks (req, res) {
-    socialNetworks.model.find((err, items) => {
+  getbannerController (req, res) {
+    banner.model.find((err, items) => {
       if (err) {
         console.log(err);
         res.status(500).send('DB Error');
