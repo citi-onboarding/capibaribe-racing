@@ -1,0 +1,54 @@
+#Navbar {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  height: 12rem;
+}
+
+.connect {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.NavBarList {
+  display: flex;
+  gap: 5rem;
+}
+
+.NavBarList > li{
+  position: relative;
+  cursor:pointer;
+  transition: all 400ms ease;
+  color: #BDBDBD;
+}
+
+.NavBarList > li a {
+  color: #BDBDBD;
+}
+
+.NavBarList > li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.3rem;
+  background: #BDBDBD;
+  transition: all 1s ease;
+}
+
+
+.NavBarList > li a:hover::before {
+  width: 40%;
+}
+
+.NavBarList > li a:focus::before {
+  width: 100%;
+  background: #FFD31A;
+}
+

@@ -1,1 +1,5 @@
-export { default as PostList } from './PostList';
+import NavBar from './NavBar';
+
+export {
+    NavBar,
+};
