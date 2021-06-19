@@ -27,10 +27,6 @@
   color: #BDBDBD;
 }
 
-.NavBarList > li a {
-  color: #BDBDBD;
-}
-
 .NavBarList > li a::before {
   content: '';
   position: absolute;

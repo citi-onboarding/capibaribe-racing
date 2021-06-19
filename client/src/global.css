@@ -25,6 +25,10 @@ body {
   background: var(--color-background-page);
 }
 
+a {
+  color: var(--color-font-global);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat';
 }
@@ -82,7 +86,7 @@ h3 {
 }
 
 .backGroundBordo {
-  background: linear-gradient(180deg, #800000 72.29%, #1F1F1F 100%);
+  background: linear-gradient(180deg, var(--color-primary) 72.29%, #1F1F1F 100%);
 }
 
 @font-face{
