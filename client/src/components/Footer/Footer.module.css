@@ -1,0 +1,38 @@
+#FooterContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  padding: 2.5rem 0;
+  gap: 5rem;
+}
+
+.SocialContent {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-start;
+  gap: 1.75rem;
+}
+
+.SocialContent .SocialIcons,
+.SocialContent .SocialIcons a {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.Complement{
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 2rem;
+}
+
+.MadeWithText {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.TextSocial {
+  font-size: 1.5rem;
+  font-weight: 600;
+}

@@ -1,13 +1,11 @@
 import {
-  PostList,
-  AboutCar,
+  Footer,
 } from './components/index.jsx';
 
 function App() {
   return (
     <div>
-      <PostList />
-      <AboutCar />
+      <Footer />
     </div>
   );
 }
