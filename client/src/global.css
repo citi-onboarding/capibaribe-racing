@@ -38,14 +38,14 @@ h2 {
   text-transform: uppercase;
   font-size: 4.8rem;
   font-weight: 400;
-  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 h3 {
   text-transform: uppercase;
   font-size: 3rem;
   font-weight: 500;
-  text-transform: uppercase;
+
 }
 
 h4 {
@@ -78,6 +78,9 @@ h4 {
   color: var(--color-font-global);
 }
 
+.backGroundBordo {
+  background: linear-gradient(180deg, #800000 72.29%, #1F1F1F 100%);
+}
 
 @font-face{
   font-family: "Montserrat";

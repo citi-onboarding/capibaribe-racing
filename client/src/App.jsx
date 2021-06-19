@@ -1,11 +1,11 @@
 import {
-  Footer,
+  Backers,
 } from './components/index.jsx';
 
 function App() {
   return (
     <div>
-      <Footer />
+      <Backers />
     </div>
   );
 }

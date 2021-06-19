@@ -1,0 +1,34 @@
+#BackersSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 3rem;
+  padding: 5.8rem 10rem 8.3rem 10rem;
+  gap: 4rem;
+}
+
+article p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+@media (max-width: 768px){
+  article {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding:  2.9rem 5rem 4.15rem 5rem;
+  }
+}

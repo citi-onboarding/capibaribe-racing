@@ -1,5 +1,5 @@
-import Footer from './Footer';
+import Backers from './Backers';
 
 export {
-    Footer,
+    Backers,
 };
