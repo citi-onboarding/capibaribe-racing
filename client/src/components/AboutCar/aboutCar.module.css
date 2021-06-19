@@ -1,9 +1,8 @@
-.aboutCar  {
+#aboutCar  {
   display: flex;
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  width: 100%;
 }
 
 #navBar {
@@ -12,7 +11,6 @@
   background: none;
   justify-content: center;
   height: 14rem;
-  width: 100vw;
 }
 
 .navContent {
@@ -76,34 +74,3 @@
     grid-template-columns: 1fr;
   }
 }
-
-
-/*.post-card {
-  width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  transition: box-shadow .3s ease-in-out;
-  margin: 15px 0;
-  cursor: pointer;
-}
-
-.post-card:hover {
-  box-shadow: 0px 10px 20px #838383;
-}
-
-.post-card img {
-  width: 100%;
-}
-
-.post-card p {
-  margin: 0;
-  padding: 10px 0;
-  width: 100%;
-  text-align: center;
-  background-color: white;
-  font-family: Nunito, sans-serif;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-}*/
