@@ -12,10 +12,8 @@ function Footer () {
         <footer className="fontDescriptionFooter container" id={styles.FooterContent}>
             <div className={styles.SocialContent}>
                 <div className={styles.SocialIcons}>
-                    <a href="https://www.linkedin.com/company/capibaribe-racing/" rel="noreferrer" target="_blank">
-                        <img src={LinkedinIcon} alt=""/>
-                        <span>Capibarib-E Racing</span>
-                    </a>
+                    <img src={PhoneIcon} alt=""/>
+                    <span>(81) 00000-0000</span>
                 </div>
 
                 <div className={styles.SocialIcons}>
@@ -26,9 +24,13 @@ function Footer () {
                 </div>
 
                 <div className={styles.SocialIcons}>
-                    <img src={PhoneIcon} alt=""/>
-                    <span>(81) 00000-0000</span>
+                    <a href="https://www.linkedin.com/company/capibaribe-racing/" rel="noreferrer" target="_blank">
+                        <img src={LinkedinIcon} alt=""/>
+                        <span>Capibarib-E Racing</span>
+                    </a>
                 </div>
+
+
                 <div>
                     <p className={styles.TextSocial}>
                         Nos acompanhe nas redes sociais!
