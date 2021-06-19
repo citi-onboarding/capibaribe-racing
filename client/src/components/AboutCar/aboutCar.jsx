@@ -4,17 +4,26 @@ import apiAxios from '../../services/api-axios.js';
 import styles from "./aboutCar.module.css";
 
 function AboutCar() {
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState(true);
 
   const [aboutcar, setAboutCar] = useState([]);
+  const [formulasae, setAboutFormulaSae] = useState([]);
 
   const loadAboutCar = async () => {
-    const res = await apiAxios.get(`about-cars`);
+    const res = await apiAxios.get("about-car");
     setAboutCar(res.data);
+    /*console.log(res);*/
+  };
+
+  const loadAboutFormulaSae = async () => {
+    const res = await apiAxios.get("about-formula-sae");
+    setAboutFormulaSae(res.data);
+    console.log(res);
   };
 
   useEffect(() => {
     loadAboutCar();
+    loadAboutFormulaSae();
   }, []);
 
   return (
@@ -24,12 +33,12 @@ function AboutCar() {
                 <nav>
                     <ul className={styles.NavbarAboutCar}>
                         <li>
-                            <h3 onclick={() => setMenu(false)} className="fontTitleSection">
+                            <h3 onClick={() => setMenu(true)} className="fontTitleSection">
                                 NOSSO CARRO
                             </h3>
                         </li>
                         <li>
-                            <h3 onclick={() => setMenu(false)} className="fontTitleSection">
+                            <h3 onClick={() => setMenu(false)} className="fontTitleSection">
                                 FÓRMULA SAE
                             </h3>
                         </li>
@@ -41,28 +50,29 @@ function AboutCar() {
 
         {menu ?
         (<div className={styles.gridSectionAboutCarContent}>
-            <div></div>
+            <div>
+              <img src={aboutcar.map((d) => d.image.secure_url)} alt="" />
+            </div>
             <div className={styles.articleAboutCar}>
                 <h2 className="fontTitleSection" id={styles.underline}>NOSSO CARRO</h2>
                 <p className="fontDescription">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                  molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos  sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam recusandae alias error harum maxime adipisci amet laborum. Perspiciatis
+                  {aboutcar.map((d) => d.description)}
                 </p>
             </div>
         </div>)
         :
         (<div className={styles.gridSectionAboutCarContent}>
-        <div></div>
+        <div>
+          <img src={formulasae.map((d) => d.image.secure_url)} alt="" />
+        </div>
         <div className={styles.articleAboutCar}>
               <h2 className="fontTitleSection" id={styles.underline}>Fórmula SAE</h2>
               <p className="fontDescription">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos  sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam recusandae alias error harum maxime adipisci amet laborum. Perspiciatis
-                </p>
+                {formulasae.map((d) => d.description)}
+              </p>
           </div>
           </div>)};
     </section>
-
     );
 }
 

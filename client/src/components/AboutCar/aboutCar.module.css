@@ -1,3 +1,7 @@
+img {
+  width: 100%;
+}
+
 #aboutCar  {
   display: flex;
   align-items: center;
@@ -58,10 +62,12 @@
 
 .gridSectionAboutCarContent {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1.5fr 2fr;
   grid-template-rows: 1fr;
   justify-content: center;
+  align-items: center;
   height: 100%;
+  width: 100%;
 }
 
 .articleAboutCar {
