@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import apiAxios from '../../services/api-axios.js';
 
-import styles from "./aboutCar.module.css";
+import styles from "./aboutCarAndSae.module.css";
 
-function AboutCar() {
+function AboutInfo() {
   const [menu, setMenu] = useState(true);
 
   const [aboutcar, setAboutCar] = useState([]);
@@ -27,20 +27,20 @@ function AboutCar() {
   }, []);
 
   return (
-    <section className="container" id={styles.aboutCar}>
+    <section className="container" id={styles.aboutInfo}>
         <header id={styles.navBar}>
             <div className={styles.navContent} id={styles.headerContainer}>
                 <nav>
-                    <ul className={styles.NavbarAboutCar}>
+                    <ul className={styles.NavbarAbout}>
                         <li>
-                            <h3 onClick={() => setMenu(true)} className="fontTitleSection">
-                                NOSSO CARRO
-                            </h3>
+                            <a href='#' onClick={() => setMenu(true)} className="fontTitleSection">
+                                <h3>NOSSO CARRO</h3>
+                            </a>
                         </li>
                         <li>
-                            <h3 onClick={() => setMenu(false)} className="fontTitleSection">
-                                FÓRMULA SAE
-                            </h3>
+                            <a href='#' onClick={() => setMenu(false)} className="fontTitleSection">
+                                <h3>FÓRMULA SAE</h3>
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -49,11 +49,8 @@ function AboutCar() {
 
 
         {menu ?
-        (<div className={styles.gridSectionAboutCarContent}>
-            <div>
-              <img src={aboutcar.map((d) => d.image.secure_url)} alt="" />
-            </div>
-            <div className={styles.articleAboutCar}>
+        (<div className={styles.gridSectionAboutInfoContent}>
+            <div className={styles.articleAboutInfo}>
                 <h2 className="fontTitleSection" id={styles.underline}>NOSSO CARRO</h2>
                 <p className="fontDescription">
                   {aboutcar.map((d) => d.description)}
@@ -61,19 +58,16 @@ function AboutCar() {
             </div>
         </div>)
         :
-        (<div className={styles.gridSectionAboutCarContent}>
-        <div>
-          <img src={formulasae.map((d) => d.image.secure_url)} alt="" />
-        </div>
-        <div className={styles.articleAboutCar}>
-              <h2 className="fontTitleSection" id={styles.underline}>Fórmula SAE</h2>
-              <p className="fontDescription">
-                {formulasae.map((d) => d.description)}
-              </p>
-          </div>
+        (<div className={styles.gridSectionAboutInfoContent}>
+            <div className={styles.articleAboutInfo}>
+                  <h2 className="fontTitleSection" id={styles.underline}>Fórmula SAE</h2>
+                  <p className="fontDescription">
+                    {formulasae.map((d) => d.description)}
+                  </p>
+              </div>
           </div>)};
     </section>
     );
 }
 
-export default AboutCar;
+export default AboutInfo;

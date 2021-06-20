@@ -2,7 +2,7 @@ img {
   width: 100%;
 }
 
-#aboutCar  {
+#aboutInfo  {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -22,7 +22,7 @@ img {
   align-items: flex-end;
 }
 
-.NavbarAboutCar {
+.NavbarAbout {
   display: flex;
   flex-direction: row;
   list-style-type: none;
@@ -31,27 +31,33 @@ img {
   gap: 5rem;
 }
 
-.NavbarAboutCar > li{
+.NavbarAbout > li{
   position: relative;
   cursor:pointer;
   transition: all 400ms ease;
 }
 
 
-.NavbarAboutCar > li h3::before {
+.NavbarAbout > li a::before {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
   height: 0.3rem;
-  background: #800000;
+  background: #BDBDBD;
   transition: all 1s ease;
 }
 
 
-.NavbarAboutCar h3:hover::before {
+.NavbarAbout > li a:hover::before {
+  width: 50%;
+}
+
+.NavbarAbout > li a:focus::before {
   width: 100%;
+  background-color: #BDBDBD;
+  height: 0.6rem;
 }
 
 #underline {
@@ -60,7 +66,7 @@ img {
   line-height: 14rem;
 }
 
-.gridSectionAboutCarContent {
+.gridSectionAboutInfoContent {
   display: grid;
   grid-template-columns: 1.5fr 2fr;
   grid-template-rows: 1fr;
@@ -70,13 +76,14 @@ img {
   width: 100%;
 }
 
-.articleAboutCar {
+.articleAboutInfo {
   text-align: right;
   align-self: center;
+
 }
 
-@media (max-width: 768px){
-  .sectionAboutCarContent {
+@media (max-width: 769px){
+  .gridSectionAboutInfoContent {
     grid-template-columns: 1fr;
   }
 }

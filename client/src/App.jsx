@@ -1,11 +1,11 @@
 import {
-  AboutCar,
+  AboutCarAndSae,
 } from './components/index.jsx';
 
 function App() {
   return (
     <div>
-      <AboutCar />
+      <AboutCarAndSae />
     </div>
   );
 }

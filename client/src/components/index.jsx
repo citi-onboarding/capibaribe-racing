@@ -1,5 +1,5 @@
-import AboutCar from './AboutCar';
+import AboutCarAndSae from './AboutCarAndSae';
 
 export {
-    AboutCar,
+    AboutCarAndSae,
 };
