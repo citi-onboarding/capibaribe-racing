@@ -45,7 +45,6 @@ function Footer () {
                     </a>
                 </div>
 
-
                 <div>
                     <p className={styles.TextSocial}>
                         Nos acompanhe nas redes sociais!
