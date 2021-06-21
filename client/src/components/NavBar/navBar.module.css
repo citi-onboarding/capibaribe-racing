@@ -13,7 +13,6 @@ img {
 }
 
 .LogoNav {
-  background: #FFD31A;
   width: 6.2rem;
   height: 6.4rem;
 }
@@ -66,23 +65,43 @@ img {
 
 @media (max-width: 769px) {
   .NavBarList {
+    transition: all .5s;
     flex-direction: column;
     position: absolute;
-    top: 12rem;
-    right: 0;
+    gap:7rem;
+    justify-content: center;
+    padding: 5rem;
+    z-index: -1;
+    top: -5rem;
+    right: -5rem;
     width: 75vw;
-    height: 80vh;
-    align-items: center;
-    border-radius: 0 0 0 7.5rem;
-    background: chartreuse;
+    height: 90rem;
+    align-items: flex-end;
+    border-radius: 0 0 0 10rem;
+    background: linear-gradient(270deg, #800000 5.56%, rgba(31, 31, 31, 0.92) 100%);
+  }
+
+  .ClosedMenuMobile li{
+    display: none;
   }
 
   .NavBarList li {
-    opacity: 0;
+    /*opacity: 0;*/
+    font-size: 2.74rem;
+    font-weight: 700;
+    text-decoration: none;
+    top: 1rem;
   }
 
   .MenuMobile img {
     display: block;
   }
 
+}
+
+@media (max-width: 376px) {
+  .NavBarList {
+    width: 100vw;
+    height: 90rem;
+  }
 }
