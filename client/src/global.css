@@ -94,9 +94,16 @@ h3 {
   src: url("./assets/Montserrat-Regular.ttf");
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   html {
     font-size: 62.5%;
+  }
+
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 56.25%;
   }
 
 }

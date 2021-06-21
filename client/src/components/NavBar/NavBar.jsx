@@ -13,9 +13,16 @@ function NavBar() {
   return (
     <header className="fontNavbar container" id={styles.Navbar}>
       <div className={styles.connect}>
-        <img src={logoCapibaNavbar} alt="Logo Capiba"/>
+
+        <div className={styles.LogoNav}>
+          <img src={logoCapibaNavbar} alt="Logo Capiba"/>
+        </div>
 
         <nav className={styles.Menu}>
+          <div className={styles.MenuMobile}>
+            <img src={MenuHamb} alt="Hamburguer Menu" />
+          </div>
+
           <ul className={styles.NavBarList}>
             <li><a href="#">Sobre nós</a></li>
             <li><a href="#">Nosso Carro</a></li>
@@ -24,8 +31,8 @@ function NavBar() {
             <li><a href="#">Contato</a></li>
           </ul>
         </nav>
-
       </div>
+
     </header>
   );
 }
