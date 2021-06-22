@@ -1,15 +1,11 @@
 import {
-  PostList,
-} from './components';
+  AboutCarAndSae,
+} from './components/index.jsx';
 
 function App() {
   return (
     <div>
-      <header>
-        <h1>Alguma coisa</h1>
-      </header>
-
-    <PostList />
+      <AboutCarAndSae />
     </div>
   );
 }
