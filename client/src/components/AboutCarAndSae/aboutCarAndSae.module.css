@@ -1,44 +1,52 @@
-img {
-  width: 100%;
+.BackgroundSection {
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center center;
+
 }
 
 #aboutInfo  {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap:3rem;
   height: 100vh;
-}
-
-#navBar {
-  display: flex;
-  flex-direction: row;
-  background: none;
-  justify-content: center;
-  height: 14rem;
 }
 
 .navContent {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+  height: 14rem;
+  width: 100%;
 }
 
 .NavbarAbout {
   display: flex;
+  justify-content: center;
   flex-direction: row;
   list-style-type: none;
-  align-items: flex-end;
-  height: 14rem;
-  gap: 5rem;
 }
 
-.NavbarAbout > li{
+.NavbarList {
+  display: flex;
+  width: 100%;
+  gap: 3rem;
+  justify-content: space-evenly;
+}
+
+/*****************************************************/
+.NavbarList li{
   position: relative;
   cursor:pointer;
   transition: all 400ms ease;
+  text-align: center;
 }
 
 
-.NavbarAbout > li a::before {
+.NavbarList > li a::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -50,11 +58,11 @@ img {
 }
 
 
-.NavbarAbout > li a:hover::before {
+.NavbarList > li a:hover::before {
   width: 50%;
 }
 
-.NavbarAbout > li a:focus::before {
+.NavbarList > li a:active::before {
   width: 100%;
   background-color: #BDBDBD;
   height: 0.6rem;
@@ -63,58 +71,31 @@ img {
 #underline {
   text-decoration: underline;
   text-underline-position: under;
-  line-height: 14rem;
+  padding: 5rem 0;
 }
 
 .gridSectionAboutInfoContent {
   display: grid;
-  grid-template-columns: 1.5fr 2fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 35% 65%;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  align-self: flex-end;
 }
 
 .articleAboutInfo {
   text-align: right;
   align-self: center;
-
 }
 
 @media (max-width: 769px){
   .gridSectionAboutInfoContent {
-    grid-template-columns: 1fr;
+    grid-template-columns: 10% 90%;
+
+    align-items: flex-start;
+
+  }
+  .articleAboutInfo {
+    text-align: right;
+    align-self: center;
   }
 }
-
-
-/*.post-card {
-  width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  transition: box-shadow .3s ease-in-out;
-  margin: 15px 0;
-  cursor: pointer;
-}
-
-.post-card:hover {
-  box-shadow: 0px 10px 20px #838383;
-}
-
-.post-card img {
-  width: 100%;
-}
-
-.post-card p {
-  margin: 0;
-  padding: 10px 0;
-  width: 100%;
-  text-align: center;
-  background-color: white;
-  font-family: Nunito, sans-serif;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-}*/
