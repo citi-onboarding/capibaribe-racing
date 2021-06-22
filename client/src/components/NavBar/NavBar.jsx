@@ -12,15 +12,13 @@ function NavBar() {
 
   return (
     <header className="fontNavbar container" id={styles.Navbar}>
-      <div className={styles.connect}>
-
-        <div className={styles.LogoNav}>
-          <img src={logoCapibaNavbar} alt="Logo Capiba"/>
-        </div>
-
+{/**/}
         <nav className={styles.Menu}>
+          <div className={styles.LogoNav}>
+            <img src={logoCapibaNavbar} alt="Logo Capiba"/>
+          </div>
 
-          <ul className={menu ? `${styles.NavBarList}` : `${styles.ClosedMenuMobile}`}>
+          <ul className={styles.NavBarList}>
             <li><a href="#">Sobre nós</a></li>
             <li><a href="#">Nosso Carro</a></li>
             <li><a href="#">Fórmula SAE</a></li>
@@ -28,18 +26,24 @@ function NavBar() {
             <li><a href="#">Contato</a></li>
           </ul>
 
-          <div className={styles.MenuMobile}>
-            <div className="icon" onClick={() => setMenu(!menu)}>
-              {menu ?
-              (<img src={MenuHamb} alt="Hamburguer Menu" />)
-              :
-              (<img src={Sair} alt="Sair" />)}
-            </div>
-
+          <div className={styles.Bars} onClick={() => setMenu(!menu)}>
+            {menu ?
+            (<img src={Sair} alt="Sair" />)
+            :
+            (<img src={MenuHamb} alt="Hamburguer Menu" />)}
           </div>
         </nav>
-      </div>
+        {menu ? null :
+        (<nav className={styles.MenuResponsive}>
 
+          <ul className={styles.MenuResponsiveList}>
+            <li><a onClick={() => setMenu(!menu)} href="#">Sobre nós</a></li>
+            <li><a onClick={() => setMenu(!menu)} href="#">Nosso Carro</a></li>
+            <li><a onClick={() => setMenu(!menu)} href="#">Fórmula SAE</a></li>
+            <li><a onClick={() => setMenu(!menu)} href="#">Patrocinadores</a></li>
+            <li><a onClick={() => setMenu(!menu)} href="#">Contato</a></li>
+          </ul>
+        </nav>)}
     </header>
   );
 }
