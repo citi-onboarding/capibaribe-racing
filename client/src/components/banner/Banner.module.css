@@ -1,0 +1,80 @@
+.bannerContainer{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 0 0 12rem;
+  width: fit-content;
+
+  background: rgba(31, 31, 31, 0.7);
+  width: 100%;
+  height: 100vh;
+}
+
+.title{
+  width: 60rem;
+  height: 26.4rem;
+  color: #BDBDBD;
+}
+
+.titleBanner{
+  width: fit-content;
+  font-style: normal;
+  font-size: 5.5rem;
+  font-weight: normal;
+  line-height: 6.7rem;
+  text-transform: none;
+}
+
+.subtitle{
+  width: 60rem;
+  height: 12rem;
+  color: #BDBDBD;
+}
+
+.subtitleBanner{
+  width: fit-content;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3rem;
+  line-height: 3.7rem;
+  text-transform: none;
+}
+
+@media (max-width: 480px) {
+  .text{
+    padding-left: 6rem;
+  }
+
+  .title{
+    width: 30rem;
+    height: 20rem;
+    color: #BDBDBD;
+  }
+
+  .titleBanner{
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .subtitle{
+    width: 30rem;
+    height: 4rem;
+    color: #BDBDBD;
+  }
+
+  .subtitleBanner{
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
