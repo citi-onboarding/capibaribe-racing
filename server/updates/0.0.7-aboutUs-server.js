@@ -8,17 +8,17 @@ exports = module.exports = (done) => {
     description: ' ',
     content: ' ',
 
-    vision: {
+    values1: {
       title: ' ',
       description: ' ',
     },
 
-    mission: {
+    values2: {
       title: ' ',
       description: ' ',
     },
 
-    values: {
+    values3: {
       title: ' ',
       description: ' ',
     },

@@ -7,7 +7,7 @@ const aboutUs = new keystone.List('about-us',{
   nodelete: true,
   nocreate: true,
   autocreate: true,
-  defaultColumns: 'name, Título, Descrição, Conteúdos, Visão, Missão, Valores',
+  defaultColumns: 'name, Título, Descrição, Valor 1, Valor 2, Valor 3',
 });
 
 aboutUs.add({
@@ -45,11 +45,11 @@ aboutUs.add({
     index: true,
   },
 
-  vision: {
+  values1: {
     title: {
       type: Types.Text,
-      label: 'Visão:',
-      note:'Insira o título',
+      label: 'Valor 1:',
+      note:'Insira o título do primeiro valor',
       required: true,
       initial: true,
       index: true,
@@ -57,7 +57,7 @@ aboutUs.add({
 
     description: {
       type: Types.Textarea,
-      label: 'Descrição da visão:',
+      label: 'Descrição do valor:',
       note:'Insira a descrição',
       required: true,
       initial: true,
@@ -66,18 +66,18 @@ aboutUs.add({
 
     icon: {
       type: Types.CloudinaryImage,
-      label: 'Ícone da visão:',
+      label: 'Ícone do valor:',
       note: 'Insira o ícone',
-      initial: true,
       required: true,
+      initial: true,
     },
   },
 
-  mission: {
+  values2: {
     title: {
       type: Types.Text,
-      label: 'Missão:',
-      note:'Insira o título',
+      label: 'Valor 2:',
+      note:'Insira o título do segundo valor',
       required: true,
       initial: true,
       index: true,
@@ -85,7 +85,7 @@ aboutUs.add({
 
     description: {
       type: Types.Textarea,
-      label: 'Descrição da missão:',
+      label: 'Descrição do valor:',
       note:'Insira a descrição',
       required: true,
       initial: true,
@@ -94,18 +94,18 @@ aboutUs.add({
 
     icon: {
       type: Types.CloudinaryImage,
-      label: 'Ícone da missão:',
+      label: 'Ícone do valor:',
       note: 'Insira o ícone',
-      initial: true,
       required: true,
+      initial: true,
     },
   },
 
-  values: {
+  values3: {
     title: {
       type: Types.Text,
-      label: 'Valor:',
-      note:'Insira o título',
+      label: 'Valor 3:',
+      note:'Insira o título do terceiro valor',
       required: true,
       initial: true,
       index: true,
