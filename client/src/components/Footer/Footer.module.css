@@ -55,12 +55,12 @@ img {
     width: 85%;
   }
 
-
-  .Complement {
+  .Complement{
     text-align: center;
   }
 
   .SocialContent {
     align-items: center;
+    text-align: center;
   }
 }
