@@ -1,0 +1,30 @@
+.background {
+  width: 100%;
+  height: 100vh;
+}
+
+/*.contact {
+  display: grid;
+  width: 90vh;
+  height: 84rem;
+  justify-content: center;
+  background: linear-gradient(180deg, #4A1F1F 72.29%, rgba(31, 31, 31, 0.15) 100%);
+  border-radius: 30px;
+}*/
+
+.title {
+  font-size: 4,8rem;
+  line-height: 5,9rem;
+
+  color: #BDBDBD;
+}
+
+.subTitle{
+  font-size: 25px;
+  line-height: 26px;
+  color: #BDBDBD;
+}
+
+.inputItems {
+
+}

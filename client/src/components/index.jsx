@@ -1,1 +1,5 @@
-export { default as PostList } from './PostList';
+import Contacts from './Contacts';
+
+export {
+  Contacts,
+};

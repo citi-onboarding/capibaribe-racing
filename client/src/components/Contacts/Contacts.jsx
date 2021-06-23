@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-
-import '../global.css';
-import styles from './Contact.module.css';
+import styles from "./Contacts.module.css";
+import apiAxios from "../../services/api-axios.js";
 
 function Contact(){
   const [name, setName] = useState('');
@@ -10,16 +9,24 @@ function Contact(){
   const [assunto, setTopic] = useState('');
   const [message, setMessage] = useState('');
 
+
+
   return(
-    <section id = "contact-section">
-      <fieldset>
+    <div className = {styles.background} id = {styles.background}>
+
+      <div className = 'container, backGroundBordo'>
 
         <div className = {styles.title}>
           <h2>CONTATO</h2>
         </div>
 
+        <div className = {styles.subTitle}>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+        </div>
+
         <div className = {styles.inputItems}>
           <div className = {styles.nameConteiner}>
+            <p>Nome</p>
             <input
                name="name"
                placeholder="Nome"
@@ -28,6 +35,7 @@ function Contact(){
           </div>
 
           <div className = {styles.emailConteiner}>
+            <p>E-mail</p>
             <input
                name="email"
                placeholder="E-mail"
@@ -36,14 +44,16 @@ function Contact(){
           </div>
 
           <div className = {styles.phoneConteiner}>
+            <p>Telefone</p>
             <input
                name="phone"
-               placeholder="Phone"
+               placeholder="Telefone"
                onChange={(e) => { setPhone(e.target.value);}}
             />
           </div>
 
           <div className = {styles.topicConteiner}>
+            <p>Assunto</p>
             <input
               name="topic"
               placeholder="Assunto"
@@ -52,6 +62,7 @@ function Contact(){
           </div>
 
           <div className = {styles.massageConteiner}>
+            <p>Mensagem</p>
             <input
               name="massage"
               placeholder="Mensagem"
@@ -64,8 +75,10 @@ function Contact(){
           </div>
 
         </div>
-      </fieldset>
-    </section>
+
+      </div>
+
+    </div>
   );
 }
 
