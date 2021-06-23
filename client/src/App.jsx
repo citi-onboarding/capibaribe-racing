@@ -1,13 +1,13 @@
 import {
-  Backers,
   AboutCarAndSae,
+  Backers,
 } from './components/index.jsx';
 
 function App() {
   return (
     <div>
-      <Backers />
       <AboutCarAndSae />
+      <Backers />
     </div>
   );
 }
