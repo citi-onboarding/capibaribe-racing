@@ -100,3 +100,10 @@ h3 {
   }
 
 }
+
+@media (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+
+}

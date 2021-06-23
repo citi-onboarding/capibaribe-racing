@@ -45,7 +45,7 @@ function Backers () {
       infinite: true,
       lazyLoad: true,
       centerMode: true,
-      centerPadding: 0,
+      centerPadding: '80px',
       slidesToShow: 3,
       slidesToScroll: 1,
       accessibility: true,
