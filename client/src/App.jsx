@@ -6,8 +6,8 @@ import {
 function App() {
   return (
     <div>
-      <Footer />
       <AboutCarAndSae />
+      <Footer />
     </div>
   );
 }
