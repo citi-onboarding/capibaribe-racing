@@ -86,7 +86,7 @@ h3 {
 }
 
 .backGroundBordo {
-  background: linear-gradient(180deg, var(--color-primary) 72.29%, #1F1F1F 100%);
+  background: linear-gradient(180deg, #4A1F1F 72.29%, #1F1F1F 100%);
 }
 
 @font-face{

@@ -1,8 +1,69 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
 #BackersSection {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   height: 100vh;
+}
+
+.Carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  height: 30rem;
+}
+
+.CarouselCards img{
+  width: 15rem;
+  height: auto;
+  margin: 0 auto;
+  z-index: 5;
+}
+
+.CarouselCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.6);
+  transition: all 0.8s ease-in-out;
+  opacity: 0.4;
+  margin: 0;
+}
+
+.activeSlide {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.Card {
+  width: 25.9rem;
+  height: 19.5rem;
+  background: linear-gradient(180deg, #E5E5E5 73.85%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 30px;
+}
+
+.arrow {
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.Next {
+  right: 40%;
+  top: 98%;
+}
+.Prev {
+  left: 40%;
+  top: 98%;
+}
+
+.slick-customize li button::before{
+  color: aqua !important;
 }
 
 article {
