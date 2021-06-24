@@ -1,88 +1,115 @@
 import React, { useState } from "react";
+import axios from 'axios';
 import styles from "./Contacts.module.css";
-import apiAxios from "../../services/api-axios.js";
 
 function Contact(){
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [assunto, setTopic] = useState('');
+  const [topic, setTopic] = useState('');
   const [message, setMessage] = useState('');
 
+  const data = {
+    name, email, phone, topic, message
+  }
+
+  const sendEmail = async () => {
+    try {
+      await axios.post('http://localhost:3001/contact', data)
+      alert("Mensagem enviado com sucesso");
+    } catch (error) {
+      alert("Houve um erro. Tente novamente.")
+      console.log(error);
+    }
+  }
 
 
   return(
-    <div className = {styles.background} id = {styles.background}>
+    <div className={styles.background} id={styles.background}>
 
-      <div className = 'container, backGroundBordo'>
+      <section id={styles.contact} className="container backGroundBordo">
 
-        <div className = {styles.title}>
+        <div className={styles.title}>
           <h2>CONTATO</h2>
         </div>
 
-        <div className = {styles.subTitle}>
+        <div className={styles.subTitle}>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
         </div>
 
-        <div className = {styles.inputItems}>
-          <div className = {styles.nameConteiner}>
-            <p>Nome</p>
-            <input
-               name="name"
-               placeholder="Nome"
-               onChange={(e) => { setName(e.target.value);}}
-            />
+        <form className={styles.contactList} onSubmit={sendEmail}>
+
+          <div className={styles.contactLeft}>
+
+            <div className={styles.inputItems}>
+              <div className={styles.nameContainer}>
+                <p className={styles.p}>Nome</p>
+                <input
+                  name="name"
+                  placeholder="Digite seu nome"
+                  required
+                  value={name}
+                  onChange={(e) => { setName(e.target.value); }}
+                />
+              </div>
+
+              <div className={styles.emailContainer}>
+                <p className={styles.p}>E-mail</p>
+                <input
+                  name="email"
+                  placeholder="exemplo@gmail.com"
+                  required
+                  value={email}
+                  onChange={(e) => { setEmail(e.target.value);}}
+                />
+              </div>
+
+              <div className={styles.phoneContainer}>
+                <p className={styles.p}>Telefone</p>
+                <input
+                  name="phone"
+                  placeholder="(DDD) 99999-9999"
+                  minLength="10"
+                  pattern="[ 0-9\(\)-]{10,16}$"
+                  value={phone}
+                  onChange={(e) => { setPhone(e.target.value);}}
+                />
+              </div>
+
+              <div className={styles.topicContainer}>
+                <p className={styles.p}>Assunto</p>
+                <input
+                  name="topic"
+                  value={topic}
+                  onChange={(e) => { setTopic(e.target.value);}}
+                />
+              </div>
+            </div>
           </div>
 
-          <div className = {styles.emailConteiner}>
-            <p>E-mail</p>
-            <input
-               name="email"
-               placeholder="E-mail"
-               onChange={(e) => { setEmail(e.target.value);}}
-            />
+          <div className={styles.contactRight}>
+            <div className={styles.messageContainer}>
+              <p className={styles.p}>Mensagem</p>
+              <textarea
+              name="message"
+              cols="30"
+              rows="4"
+              placeholder="Digite a sua mensagem"
+              required
+              value={message}
+              onChange={(e) => { setMessage(e.target.value);}}/>
+            </div>
+
+            <div className={styles.sentContainer}>
+              <button type="submit">Enviar</button>
+            </div>
           </div>
+        </form>
 
-          <div className = {styles.phoneConteiner}>
-            <p>Telefone</p>
-            <input
-               name="phone"
-               placeholder="Telefone"
-               onChange={(e) => { setPhone(e.target.value);}}
-            />
-          </div>
-
-          <div className = {styles.topicConteiner}>
-            <p>Assunto</p>
-            <input
-              name="topic"
-              placeholder="Assunto"
-              onChange={(e) => { setTopic(e.target.value);}}
-            />
-          </div>
-
-          <div className = {styles.massageConteiner}>
-            <p>Mensagem</p>
-            <input
-              name="massage"
-              placeholder="Mensagem"
-              onChange={(e) => { setMessage(e.target.value);}}
-            />
-          </div>
-
-          <div className={styles.sentContainer}>
-            <button type="button">Enviar</button>
-          </div>
-
-        </div>
-
-      </div>
+      </section>
 
     </div>
   );
 }
 
 export default Contact;
-
-
-
