@@ -1,7 +1,10 @@
-import Backers from './Backers';
+import Footer from './Footer';
 import AboutCarAndSae from './AboutCarAndSae';
+import Backers from './Backers';
+
 
 export {
-    Backers,
-    AboutCarAndSae,
+  AboutCarAndSae,
+  Backers,
+  Footer,
 };

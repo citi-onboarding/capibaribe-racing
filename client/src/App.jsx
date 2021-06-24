@@ -1,6 +1,7 @@
 import {
   AboutCarAndSae,
   Backers,
+  Footer,
 } from './components/index.jsx';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div>
       <AboutCarAndSae />
       <Backers />
+      <Footer />
     </div>
   );
 }
