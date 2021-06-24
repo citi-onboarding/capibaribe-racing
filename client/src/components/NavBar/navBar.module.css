@@ -7,7 +7,6 @@
   transform: translateX(-50%);
   height: 10vh;
   width: 100vw;
-  transition: all 0.5s ease-out;
   z-index: 9999;
   background: linear-gradient(270deg, #1F1F1F 16.56%, rgba(31, 31, 31, 0.7) 87.46%);
 }
@@ -33,11 +32,6 @@
   cursor: pointer;
 }
 
-.NavBarList li:active {
-  color: aqua;
-  font-weight: 700;
-}
-
 .LogoNav {
   width: 6.2rem;
   height: 6.4rem;
@@ -48,13 +42,19 @@
   display: none;
 }
 
+@media  screen and (max-width: 1000px){
+  .NavBarList li a{
+    font-size: 1.8rem;
+  }
+}
+
 @media  screen and (max-width: 768px){
   .Bars {
     display: block;
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(0, 100%);
+    transform: translate(-100%, 100%);
     cursor: pointer;
   }
 
@@ -68,10 +68,10 @@
     flex-direction: column;
     transition: all 0.5s ease-out;
     position: fixed;
-    width: 100%;
+    width: 80%;
+    right: 0;
     height: 62rem;
     top: 10vh;
-    right: -5rem;
     z-index: 0;
     background: linear-gradient(270deg, #1F1F1F 16.56%, rgba(31, 31, 31, 0.7) 87.46%);
     border-radius: 0 0 0 5rem;

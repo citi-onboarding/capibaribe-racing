@@ -9,6 +9,7 @@ import styles from "./navBar.module.css";
 
 function NavBar() {
   const [menu, setMenu] = useState(true);
+  const [clickMenu, setClickMenu] = useState(false);
 
   return (
     <header className="fontNavbar" id={styles.Navbar}>
@@ -18,7 +19,7 @@ function NavBar() {
           </div>
 
           <ul className={styles.NavBarList}>
-            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#banner">Sobre nós</a></li>
             <li><a href="#infoCarAndSae">Nosso Carro</a></li>
             <li><a href="#infoCarAndSae">Fórmula SAE</a></li>
             <li><a href="#">Patrocinadores</a></li>
@@ -36,9 +37,9 @@ function NavBar() {
         (<nav className={styles.MenuResponsive}>
 
           <ul className={styles.MenuResponsiveList}>
-            <li><a onClick={() => setMenu(!menu)} href="#">Sobre nós</a></li>
-            <li><a onClick={() => setMenu(!menu)} href="#aboutInfo">Nosso Carro</a></li>
-            <li><a onClick={() => setMenu(!menu)} href="#aboutInfo">Fórmula SAE</a></li>
+            <li><a onClick={() => setMenu(!menu)} href="#banner">Sobre nós</a></li>
+            <li><a onClick={() => setMenu(!menu)} href="#infoCarAndSae">Nosso Carro</a></li>
+            <li><a onClick={() => setMenu(!menu)} href="#infoCarAndSae">Fórmula SAE</a></li>
             <li><a onClick={() => setMenu(!menu)} href="#">Patrocinadores</a></li>
             <li><a onClick={() => setMenu(!menu)} href="#">Contato</a></li>
           </ul>

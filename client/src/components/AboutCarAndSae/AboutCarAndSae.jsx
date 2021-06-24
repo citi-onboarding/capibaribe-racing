@@ -33,14 +33,10 @@ function AboutInfo() {
             <nav className={styles.NavbarAbout}>
                 <ul className={styles.NavbarList}>
                     <li>
-                        <a href='#' onClick={() => setMenu(true)} className="fontTitleSection">
-                            <h3>NOSSO CARRO</h3>
-                        </a>
+                      <h3 a href='#' className="fontTitleSection">NOSSO CARRO</h3>
                     </li>
                     <li>
-                        <a href='#' onClick={() => setMenu(false)} className="fontTitleSection">
-                            <h3>FÓRMULA SAE</h3>
-                        </a>
+                      <h3 href='#' className="fontTitleSection">FÓRMULA SAE</h3>
                     </li>
                 </ul>
             </nav>

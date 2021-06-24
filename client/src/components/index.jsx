@@ -1,9 +1,11 @@
 import NavBar from './NavBar';
 import Footer from './Footer';
+import Banner from './banner';
 import AboutCarAndSae from './AboutCarAndSae';
 
 export {
-    NavBar,
-    AboutCarAndSae,
-    Footer,
+  NavBar,
+  Banner,
+  AboutCarAndSae,
+  Footer,
 };
