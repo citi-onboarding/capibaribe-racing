@@ -12,7 +12,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
   padding: 0 0 0 12rem;
   width: fit-content;
 
@@ -22,44 +21,50 @@
 }
 
 .title{
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 20px;
   width: 60rem;
-  height: 26.4rem;
+  height: 60%;
   color: #BDBDBD;
 }
 
 .titleBanner{
-  width: fit-content;
   font-style: normal;
-  font-size: 5.5rem;
+  font-size: 45px;
   font-weight: normal;
-  line-height: 6.7rem;
+  line-height: 57px;
   text-transform: none;
 }
 
 .subtitle{
-  width: 60rem;
-  height: 12rem;
+  width: 50rem;
+  height: 40%;
+
+  border-top: 4px solid #E5E5E5;
+  border-left: 4px solid #E5E5E5;
   color: #BDBDBD;
 }
 
 .subtitleBanner{
+  padding: 20px 0 0 22px;
   width: fit-content;
   font-style: normal;
   font-weight: normal;
-  font-size: 3rem;
-  line-height: 3.7rem;
+  font-size: 25px;
+  line-height: 30px;
   text-transform: none;
 }
 
-@media (max-width: 480px) {
+
+@media (max-width: 564px) {
   .text{
     padding-left: 6rem;
   }
 
   .title{
-    width: 30rem;
-    height: 20rem;
-    color: #BDBDBD;
+    width: 40rem;
+    height: 50%;
   }
 
   .titleBanner{
@@ -68,13 +73,19 @@
   }
 
   .subtitle{
-    width: 30rem;
-    height: 4rem;
-    color: #BDBDBD;
+    width: 40rem;
+    height: 50%;
   }
 
   .subtitleBanner{
     font-size: 20px;
     line-height: 24px;
+  }
+}
+
+@media (max-width: 484px){
+  .titleBanner{
+    font-size: 28px;
+    line-height: 32px;
   }
 }
