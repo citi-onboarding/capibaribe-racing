@@ -5,6 +5,8 @@ import apiAxios from "../../services/api-axios.js";
 import { ReactComponent as ArrowRight} from "../../assets/arrowRight.svg";
 import { ReactComponent as ArrowLeft}  from "../../assets/arrowLeft.svg";
 
+import "./slickBackers.css";
+
 function Backers () {
     const [backers, setBackers] = useState([]);
 
@@ -39,13 +41,12 @@ function Backers () {
 
     const settings = {
       dots: true,
-      dotsClass: `slick-dots slick-customize`,
       speed: 500,
       arrows: true,
       infinite: true,
       lazyLoad: true,
       centerMode: true,
-      centerPadding: '80px',
+      centerPadding: 0,
       slidesToShow: 3,
       slidesToScroll: 1,
       accessibility: true,
@@ -53,16 +54,17 @@ function Backers () {
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
       beforeChange: (current, next) => setImageIndex(next),
-      slide: 'divoooooooo',
+      Slide: 'divoooooooo',
       autoplay: true,
-      autoplaySpeed: 6000,
+      autoplaySpeed: 1555555000,
       responsive: [
         {
-          breakpoint: 650,
+          breakpoint: 768,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-          }
+          },
+
         }]
     };
 
@@ -70,15 +72,13 @@ function Backers () {
       <section className="fontDescription container" id={styles.BackersSection}>
         <h2>Patrocinadores</h2>
 
-        <div className={styles.Carousel}>
+        <div className={styles.Carousel} id="CarouselSectionBackers">
           <Slider {...settings}>
             {backers.map(({fields, name, _id}, idx) => (
                 <div key={_id} className={idx === imageIndex ? `${styles.CarouselCards} ${styles.activeSlide}` : `${styles.CarouselCards}`}>
                   <div className={styles.Card}>
                     <img
                       src={fields.addImage.url}
-                      height={100}
-                      width={100}
                       alt={name}
                       />
                   </div>

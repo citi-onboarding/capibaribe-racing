@@ -1,0 +1,42 @@
+#CarouselSectionBackers .slick-dots li button::before {
+  font-size: 1.5rem !important;
+  color: #C4C4C4 !important;
+  opacity: 0.3 !important;
+}
+
+#CarouselSectionBackers .slick-dots li.slick-active button::before {
+  color: #C4C4C4 !important;
+  opacity: 1 !important;
+}
+
+.slick-dots li {
+  width: 2.7rem !important;
+  height: 2rem !important;
+}
+
+#CarouselSectionBackers .slick-slider.slick-initialized {
+  padding: 5rem 0;
+}
+
+.slick-list {margin: 0 -8rem !important;}
+.slick-slide>div {padding: 0 5px !important;}
+
+#CarouselSectionBackers .slick-dots {
+  font-size: 40rem !important;
+  display: flex !important;
+  justify-content: center;
+  width: 100% !important;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 35%);
+}
+
+@media (max-width: 768px){
+  .slick-initialized {
+    height: 100%;
+  }
+
+  .slick-slide>div {
+    height: 25rem;
+  }
+}
