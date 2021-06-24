@@ -11,17 +11,16 @@ function NavBar() {
   const [menu, setMenu] = useState(true);
 
   return (
-    <header className="fontNavbar container" id={styles.Navbar}>
-{/**/}
-        <nav className={styles.Menu}>
+    <header className="fontNavbar" id={styles.Navbar}>
+        <nav className={`container ${styles.Menu}`}>
           <div className={styles.LogoNav}>
             <img src={logoCapibaNavbar} alt="Logo Capiba"/>
           </div>
 
           <ul className={styles.NavBarList}>
             <li><a href="#">Sobre nós</a></li>
-            <li><a href="#">Nosso Carro</a></li>
-            <li><a href="#">Fórmula SAE</a></li>
+            <li><a href="#infoCarAndSae">Nosso Carro</a></li>
+            <li><a href="#infoCarAndSae">Fórmula SAE</a></li>
             <li><a href="#">Patrocinadores</a></li>
             <li><a href="#">Contato</a></li>
           </ul>
@@ -38,8 +37,8 @@ function NavBar() {
 
           <ul className={styles.MenuResponsiveList}>
             <li><a onClick={() => setMenu(!menu)} href="#">Sobre nós</a></li>
-            <li><a onClick={() => setMenu(!menu)} href="#">Nosso Carro</a></li>
-            <li><a onClick={() => setMenu(!menu)} href="#">Fórmula SAE</a></li>
+            <li><a onClick={() => setMenu(!menu)} href="#aboutInfo">Nosso Carro</a></li>
+            <li><a onClick={() => setMenu(!menu)} href="#aboutInfo">Fórmula SAE</a></li>
             <li><a onClick={() => setMenu(!menu)} href="#">Patrocinadores</a></li>
             <li><a onClick={() => setMenu(!menu)} href="#">Contato</a></li>
           </ul>

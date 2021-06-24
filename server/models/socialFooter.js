@@ -7,7 +7,7 @@ const socialNetworks = new keystone.List('SocialNetworks', {
     autocreate: true,
     nocreate: true,
     nodelete: true,
-    defaultColumns: 'name, social, rede',
+    defaultColumns: 'name',
 });
 
 socialNetworks.add({
@@ -19,9 +19,25 @@ socialNetworks.add({
     label: 'Identificador',
     },
 
-    social: {
-    type: Types.TextArray,
-    label: 'URL das redes sociais',
+    phone: {
+      type: Types.Text,
+      required: true,
+      initial: true,
+      label: 'Número do telefone',
+    },
+
+    instagram: {
+      type: Types.Text,
+      required: true,
+      initial: true,
+      label: 'Link do instagram',
+    },
+
+    linkedin: {
+      type: Types.Text,
+      required: true,
+      initial: true,
+      label: 'Link do Linkedin',
     },
 
 });
