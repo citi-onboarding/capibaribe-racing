@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
   justify-content: space-between;
   gap:3rem;
   height: 100vh;
@@ -12,7 +11,7 @@
   background-size: cover;
   background-repeat:no-repeat;
   background-position: center center;
-  z-index: -1;
+  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -20,18 +19,20 @@
 .BackgroundSection::before {
   content: '';
   position:absolute;
+  z-index: 1;
   top:0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(31, 31, 31, 5) -50%, rgba(31, 31, 31, 0.7) 85%,rgba(31, 31, 31, 5) 100%);
+  background: linear-gradient(rgba(31, 31, 31, 4) -5%, rgba(31, 31, 31, 0.7) 80%,rgba(31, 31, 31, 4) 100%);
 }
 
 .navContent {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5rem 0;
+  z-index: 10;
+  padding: 15vh 0 5rem 0;
   height: 14rem;
   width: 100%;
 }
@@ -92,6 +93,7 @@
   display: grid;
   grid-template-columns: 35% 65%;
   justify-content: center;
+  z-index: 10;
   align-items: center;
   align-self: flex-end;
 }
@@ -111,5 +113,26 @@
   .articleAboutInfo {
     text-align: right;
     align-self: center;
+  }
+}
+
+@media (max-width: 550px) {
+  h2 {
+    font-size: 4.5rem !important;
+  }
+
+  h3 {
+    font-size: 2.7rem !important;
+  }
+}
+
+
+@media (max-width: 375px) {
+  h2 {
+    font-size: 4rem !important;
+  }
+
+  h3 {
+    font-size: 2.4rem !important;
   }
 }

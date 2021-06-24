@@ -40,7 +40,6 @@ function Backers () {
 
 
     const settings = {
-      dots: true,
       speed: 500,
       arrows: true,
       infinite: true,
@@ -48,7 +47,7 @@ function Backers () {
       centerMode: true,
       centerPadding: 0,
       slidesToShow: 3,
-      slidesToScroll: 1,
+      slidesToScroll: 3,
       accessibility: true,
       focusOnSelect: true,
       nextArrow: <NextArrow />,
@@ -59,13 +58,20 @@ function Backers () {
       autoplaySpeed: 1555555000,
       responsive: [
         {
-          breakpoint: 768,
+          breakpoint: 1000,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToShow: 2,
+            slidesToScroll: 2,
           },
-
-        }]
+        },
+        {
+        breakpoint: 550,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      }
+      ]
     };
 
     return (
