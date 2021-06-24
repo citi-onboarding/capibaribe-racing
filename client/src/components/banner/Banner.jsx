@@ -4,8 +4,6 @@ import apiAxios from "../../services/api-axios.js";
 
 function Banner(){
   const [banner, setBanner] = useState([]);
-  const [title, setTitle] = useState([]);
-  const [subtitle, setSubtitle] = useState([]);
 
   const loadBanner = async () => {
     const res = await apiAxios.get('banner');
@@ -24,13 +22,15 @@ function Banner(){
       <div className={styles.text}>
 
         <div className={styles.title}>
-          <h1 className={styles.titleBanner} id={styles.title}>CONSTUINDO O FUTURO DO AUTOMOBILISMO ELÉTRICO</h1>
+          <h1 className={styles.titleBanner} id={styles.title}>{banner.map((d) => d.name)}</h1>
         </div>
 
         <div className={styles.lineCenter} id={styles.title}></div>
 
         <div className={styles.subtitle}>
-          <h2 className={styles.subtitleBanner}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia</h2>
+          <p className={styles.subtitleBanner}>
+            {banner.map((d) => d.description)}
+          </p>
         </div>
 
       </div>
