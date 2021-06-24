@@ -1,0 +1,115 @@
+#aboutInfo  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  gap:3rem;
+  height: 100vh;
+}
+
+.BackgroundSection {
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center center;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.BackgroundSection::before {
+  content: '';
+  position:absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(31, 31, 31, 5) -50%, rgba(31, 31, 31, 0.7) 85%,rgba(31, 31, 31, 5) 100%);
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+  height: 14rem;
+  width: 100%;
+}
+
+.NavbarAbout {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.NavbarList {
+  display: flex;
+  width: fit-content;
+  gap: 3rem;
+  justify-content: space-evenly;
+}
+
+/*****************************************************/
+.NavbarList li{
+  position: relative;
+  cursor:pointer;
+  transition: all 400ms ease;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+
+.NavbarList > li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.3rem;
+  background: #BDBDBD;
+  transition: all 1s ease;
+}
+
+
+.NavbarList > li a:hover::before {
+  width: 50%;
+}
+
+.NavbarList > li a:focus::before {
+  width: 100%;
+  background-color: #BDBDBD;
+  height: 0.6rem;
+}
+
+#underline {
+  text-decoration: underline;
+  text-underline-position: under;
+  padding: 5rem 0;
+}
+
+.gridSectionAboutInfoContent {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.articleAboutInfo {
+  text-align: right;
+  align-self: center;
+}
+
+@media (max-width: 769px){
+  .gridSectionAboutInfoContent {
+    grid-template-columns: 10% 90%;
+
+    align-items: flex-start;
+
+  }
+  .articleAboutInfo {
+    text-align: right;
+    align-self: center;
+  }
+}

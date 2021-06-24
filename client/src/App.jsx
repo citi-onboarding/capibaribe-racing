@@ -1,13 +1,17 @@
 
 import {
   Contacts,
+  Footer,
+  AboutCarAndSae,
 } from './components/index.jsx';
 
 function App() {
   return (
-    <div>
+    <>
       <Contacts />
-    </div>
+      <AboutCarAndSae />
+      <Footer />
+    </>
   );
 }
 
