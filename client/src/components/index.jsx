@@ -1,7 +1,9 @@
-import Footer from './Footer';
+import Banner from './banner';
 import AboutCarAndSae from './AboutCarAndSae';
+import Footer from './Footer';
 
 export {
-    Footer,
-    AboutCarAndSae,
+  Banner,
+  AboutCarAndSae,
+  Footer,
 };

@@ -1,14 +1,16 @@
 import {
+  Banner,
   Footer,
   AboutCarAndSae,
 } from './components/index.jsx';
 
 function App() {
   return (
-    <div>
+    <>
+      <Banner />
       <AboutCarAndSae />
       <Footer />
-    </div>
+    </>
   );
 }
 

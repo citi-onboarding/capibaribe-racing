@@ -1,0 +1,93 @@
+.bannerContainer{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 0 12rem;
+  width: fit-content;
+
+  background: rgba(31, 31, 31, 0.7);
+  width: 100%;
+  height: 100vh;
+}
+
+.title{
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  width: 60rem;
+  height: 60%;
+  color: #BDBDBD;
+}
+
+.titleBanner{
+  font-style: normal;
+  font-size: 45px;
+  font-weight: normal;
+  line-height: 57px;
+  text-transform: none;
+}
+
+.subtitle{
+  width: 50rem;
+  height: 40%;
+
+  border-top: 4px solid #E5E5E5;
+  border-left: 4px solid #E5E5E5;
+  color: #BDBDBD;
+}
+
+.subtitleBanner{
+  padding: 20px 0 0 22px;
+  width: fit-content;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: none;
+}
+
+
+@media (max-width: 564px) {
+  .text{
+    padding-left: 6rem;
+  }
+
+  .title{
+    width: 40rem;
+    height: 50%;
+  }
+
+  .titleBanner{
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .subtitle{
+    width: 40rem;
+    height: 50%;
+  }
+
+  .subtitleBanner{
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 484px){
+  .titleBanner{
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
