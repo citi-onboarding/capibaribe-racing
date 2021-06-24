@@ -1,3 +1,16 @@
+input{
+  background: none;
+  resize: none;
+  outline: none;
+  border: none;
+  border-bottom: 6px solid #E5E5E5;
+  width: 100%;
+
+  font-size: 18px;
+  line-height: 20px;
+  color: #E5E5E5;
+}
+
 .p { /* font do p */
   font-family: "Montserrat";
   font-weight: 600;
@@ -7,6 +20,8 @@
 }
 
 .background {
+  margin-top: 7%;
+  margin-bottom: 7%;
   display: flex;
   align-items: center;
   width: 100%;
@@ -19,135 +34,98 @@
   gap: 5rem;
   height: 65rem;
   border-radius: 3rem;
+
+  background: linear-gradient(180deg, #4A1F1F 72.29%, rgba(31, 31, 31, 0.15) 100%);
 }
 
 .title {
-  padding-top: 5rem;
-  padding-left: 5rem;
+  display: flex;
+  padding-top: 50px;
+  padding-left: 50px;
 
-  font-size: 4,8rem;
-  line-height: 5,9rem;
+  font-size: 48px;
+  line-height: 59px;
   color: #BDBDBD;
 }
 
 .subTitle{
-  padding-left: 5rem;
-  line-height: 26px;
+  display: flex;
+  padding-left: 50px;
 
   font-family: Montserrat;
+  line-height: 26px;
   font-size: 25px;
   color: #BDBDBD;
 }
 
 .contactList{
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content:space-around;
-  gap: 5rem;
 }
 
 .contactLeft{
   display: flex;
-  gap: 8rem;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  gap: 30px;
 }
 
 .contactRight{
   display: flex;
-  gap: 8rem;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  gap: 30px;
 }
 
 .nameContainer{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-}
-
-.nameContainer input{
-  background: none;
-  outline: none;
-  border: none;
-  border-bottom: 0.6rem solid #E5E5E5;
-
-  font-size: 25px;
-  line-height: 26px;
-  color: #E5E5E5;
+  width: 80%;
 }
 
 .emailContainer{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-}
-
-.emailContainer input{
-  background: none;
-  outline: none;
-  border: none;
-  border-bottom: 0.6rem solid #E5E5E5;
-
-  font-size: 25px;
-  line-height: 26px;
-  color: #E5E5E5;
+  width: 80%;
 }
 
 .phoneContainer{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-}
-
-.phoneContainer input{
-  background: none;
-  outline: none;
-  border: none;
-  border-bottom: 0.6rem solid #E5E5E5;
-
-  font-size: 25px;
-  line-height: 26px;
-  color: #E5E5E5;
+  width: 80%;
 }
 
 .topicContainer{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-}
-
-.topicContainer input{
-  background: none;
-  outline: none;
-  border: none;
-  border-bottom: 0.6rem solid #E5E5E5;
-
-  font-size: 25px;
-  line-height: 26px;
-  color: #E5E5E5;
+  width: 80%;
 }
 
 .messageContainer{
   display: flex;
   gap: 1rem;
   flex-direction: column;
-  align-items: flex-start;
+  width: 80%;
 }
 
 .messageContainer textarea {
-  resize: none;
   background: none;
-
+  resize: none;
   outline: none;
   border: none;
-  border-bottom: 0.6rem solid #E5E5E5;
-  border-left: 0.6rem solid #E5E5E5;
-  border-right: 0.6rem solid #E5E5E5;
+
+  border-bottom: 6px solid #E5E5E5;
+  border-left: 6px solid #E5E5E5;
+  border-right: 6px solid #E5E5E5;
+  width: 100%;
 
   font-family: "Montserrat";
-  font-size: 25px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 20px;
   color: #E5E5E5;
 }
 
@@ -161,6 +139,88 @@
   background: #FFD31A;
 }
 
-@media (max-width: 1000px){
+@media (max-width: 800px){
+  input{
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 26px;
+    width: 100%;
+  }
 
+  .background {
+    margin-bottom: 20%;
+  }
+
+  #contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    height: 650px;
+  }
+
+  .title{
+    padding: 0;
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .subTitle{
+    padding: 0 20px 0 20px;
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+  .contactList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .contactRight{
+    justify-self: center;
+    align-items: center;
+  }
+
+  .messageContainer textarea {
+    width: 100%;
+  }
+
+  .sentContainer button{
+    line-height: 15px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 320px) {
+  #contact{
+    height: 800px;
+  }
+
+  .background {
+    margin-bottom: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .background{
+    margin-bottom: 0%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .background{
+    margin-top: 0%;
+    margin-bottom: 0%;
+  }
 }

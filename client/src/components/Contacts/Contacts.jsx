@@ -41,49 +41,48 @@ function Contact(){
 
           <div className={styles.contactLeft}>
 
-            <div className={styles.inputItems}>
-              <div className={styles.nameContainer}>
-                <p className={styles.p}>Nome</p>
-                <input
-                  name="name"
-                  placeholder="Digite seu nome"
-                  required
-                  value={name}
-                  onChange={(e) => { setName(e.target.value); }}
-                />
-              </div>
+            <div className={styles.nameContainer}>
+              <p className={styles.p}>Nome</p>
+              <input
+                name="name"
+                placeholder="Digite seu nome"
+                required
+                value={name}
+                onChange={(e) => { setName(e.target.value); }}
+              />
+            </div>
 
-              <div className={styles.emailContainer}>
-                <p className={styles.p}>E-mail</p>
-                <input
-                  name="email"
-                  placeholder="exemplo@gmail.com"
-                  required
-                  value={email}
-                  onChange={(e) => { setEmail(e.target.value);}}
-                />
-              </div>
+            <div className={styles.emailContainer}>
+              <p className={styles.p}>E-mail</p>
+              <input
+                name="email"
+                placeholder="exemplo@gmail.com"
+                required
+                value={email}
+                onChange={(e) => { setEmail(e.target.value);}}
+              />
+            </div>
 
-              <div className={styles.phoneContainer}>
-                <p className={styles.p}>Telefone</p>
-                <input
-                  name="phone"
-                  placeholder="(DDD) 99999-9999"
-                  minLength="10"
-                  pattern="[ 0-9\(\)-]{10,16}$"
-                  value={phone}
-                  onChange={(e) => { setPhone(e.target.value);}}
-                />
-              </div>
+            <div className={styles.phoneContainer}>
+              <p className={styles.p}>Telefone</p>
+              <input
+                name="phone"
+                placeholder="(DDD) 99999-9999"
+                minLength="10"
+                pattern="[ 0-9\(\)-]{10,16}$"
+                value={phone}
+                onChange={(e) => { setPhone(e.target.value);}}
+              />
+            </div>
 
-              <div className={styles.topicContainer}>
-                <p className={styles.p}>Assunto</p>
-                <input
-                  name="topic"
-                  value={topic}
-                  onChange={(e) => { setTopic(e.target.value);}}
-                />
-              </div>
+            <div className={styles.topicContainer}>
+              <p className={styles.p}>Assunto</p>
+              <input
+                name="topic"
+                width="200px"
+                value={topic}
+                onChange={(e) => { setTopic(e.target.value);}}
+              />
             </div>
           </div>
 
@@ -93,7 +92,7 @@ function Contact(){
               <textarea
               name="message"
               cols="30"
-              rows="4"
+              rows="5"
               placeholder="Digite a sua mensagem"
               required
               value={message}

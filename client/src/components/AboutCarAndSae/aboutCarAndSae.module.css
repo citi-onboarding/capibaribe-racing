@@ -13,6 +13,7 @@
   background-repeat:no-repeat;
   background-position: center center;
   z-index: -1;
+  position: relative;
   width: 100%;
   height: 100%;
 }

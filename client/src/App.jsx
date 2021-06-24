@@ -1,15 +1,15 @@
 
 import {
+  AboutCarAndSae,
   Contacts,
   Footer,
-  AboutCarAndSae,
 } from './components/index.jsx';
 
 function App() {
   return (
     <>
-      <Contacts />
       <AboutCarAndSae />
+      <Contacts />
       <Footer />
     </>
   );
