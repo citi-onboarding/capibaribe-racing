@@ -22,7 +22,7 @@ function Banner(){
       <div className={styles.text}>
 
         <div className={styles.title}>
-          <h1 className={styles.titleBanner} id={styles.title}>{banner.map((d) => d.name)}</h1>
+          <h1 className={styles.titleBanner} id={styles.title}>{banner.map((d) => d.title)}</h1>
         </div>
 
         <div className={styles.lineCenter} id={styles.title}></div>
