@@ -1,4 +1,5 @@
 import {
+  Banner,
   AboutCarAndSae,
   Backers,
   Footer,
@@ -6,11 +7,12 @@ import {
 
 function App() {
   return (
-    <div>
+    <>
+      <Banner />
       <AboutCarAndSae />
       <Backers />
       <Footer />
-    </div>
+    </>
   );
 }
 
