@@ -75,7 +75,7 @@ function Backers () {
     };
 
     return (
-      <section className="fontDescription container" id={styles.BackersSection}>
+      <section className={`fontDescription container ${styles.BackersSection}`} id="Sponsors">
         <h2>Patrocinadores</h2>
 
         <div className={styles.Carousel} id="CarouselSectionBackers">

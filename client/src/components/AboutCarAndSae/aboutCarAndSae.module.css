@@ -19,7 +19,7 @@
 .BackgroundSection::before {
   content: '';
   position:absolute;
-  z-index: 1;
+  z-index: 0;
   top:0;
   left: 0;
   right: 0;
@@ -61,7 +61,7 @@
 }
 
 
-.NavbarList > li a::before {
+.NavbarList > li h3::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -73,11 +73,11 @@
 }
 
 
-.NavbarList > li a:hover::before {
+.NavbarList > li h3:hover::before {
   width: 50%;
 }
 
-.NavbarList > li a:focus::before {
+.NavbarList > li h3:active::before {
   width: 100%;
   background-color: #BDBDBD;
   height: 0.6rem;
