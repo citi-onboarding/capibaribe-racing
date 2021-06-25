@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const prod = process.env.NODE_ENV === production;
+const prod = process.env.NODE_ENV === "production";
 
 let apiAxios;
 
