@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from 'axios';
+import apiAxios from '../../services/api-axios';
 import styles from "./Contacts.module.css";
 
 function Contact(){
@@ -9,17 +9,15 @@ function Contact(){
   const [topic, setTopic] = useState('');
   const [message, setMessage] = useState('');
 
-  const data = {
-    name, email, phone, topic, message
-  }
-
-  const sendEmail = async () => {
+  const sendEmail = async (e) => {
     try {
-      await axios.post('http://localhost:3001/contact', data)
+      e.preventDefault();
+
+      await apiAxios.post('contact', {name, email, phone, topic, message})
       alert("Mensagem enviado com sucesso");
     } catch (error) {
-      alert("Houve um erro. Tente novamente.")
       console.log(error);
+      alert("Houve um erro. Tente novamente.")
     }
   }
 
