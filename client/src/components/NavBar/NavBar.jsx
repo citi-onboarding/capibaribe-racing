@@ -22,8 +22,8 @@ function NavBar() {
             <li><a href="#banner">Sobre nós</a></li>
             <li><a href="#infoCarAndSae">Nosso Carro</a></li>
             <li><a href="#infoCarAndSae">Fórmula SAE</a></li>
-            <li><a href="#">Patrocinadores</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#Sponsors">Patrocinadores</a></li>
+            <li><a href="#contactUs">Contato</a></li>
           </ul>
 
           <input type="checkbox" className={styles.checkMode} id="check"/>

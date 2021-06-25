@@ -1,0 +1,119 @@
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+.BackersSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  min-height: 850px;
+  padding-top: 15vh;
+  padding-bottom: 2rem;
+}
+
+.Carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:75%;
+  height: 35rem;
+}
+
+.CarouselCards img{
+  width: 15rem;
+  height: auto;
+  margin: 0 auto;
+  z-index: 5;
+}
+
+.CarouselCards {
+  display: flex !important;
+  align-items: center;
+  width: 100% !important;
+  justify-content: center;
+  transform: scale(1);
+  transition: all 0.8s ease-in-out;
+  margin: 0;
+}
+
+.Card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25.9rem;
+  height: 19.5rem;
+  background: linear-gradient(180deg, #E5E5E5 73.85%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 30px;
+  padding: 2.5rem;
+}
+
+.Card img {
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+.arrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.arrow svg {
+  width: 3.6rem !important;
+}
+
+.Next {
+  top: 100%;
+  margin: 0 10rem;
+}
+
+.Prev {
+  top: 100%;
+  margin: 0 -10rem;
+}
+
+
+.supportUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 3rem;
+  padding: 5.8rem 10rem 8.3rem 10rem;
+  gap: 4rem;
+}
+
+.supportUs p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+@media (max-width: 768px){
+  .supportUs {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding:  2.9rem 5rem 4.15rem 5rem;
+  }
+
+  .CarouselCards {
+    height: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .Card {
+    width: 35rem;
+    height: 26.35rem;
+  }
+}

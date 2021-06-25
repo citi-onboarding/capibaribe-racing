@@ -1,8 +1,9 @@
 import {
   NavBar,
   Banner,
-  Footer,
   AboutCarAndSae,
+  Backers,
+  Footer,
 } from './components/index.jsx';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <NavBar />
       <Banner />
       <AboutCarAndSae />
+      <Backers />
       <Footer />
     </div>
   );
