@@ -43,7 +43,6 @@ function Contact(){
               <p className={styles.p}>Nome</p>
               <input
                 name="name"
-                placeholder="Digite seu nome"
                 required
                 value={name}
                 onChange={(e) => { setName(e.target.value); }}
@@ -54,7 +53,6 @@ function Contact(){
               <p className={styles.p}>E-mail</p>
               <input
                 name="email"
-                placeholder="exemplo@gmail.com"
                 required
                 value={email}
                 onChange={(e) => { setEmail(e.target.value);}}
@@ -65,7 +63,6 @@ function Contact(){
               <p className={styles.p}>Telefone</p>
               <input
                 name="phone"
-                placeholder="(DDD) 99999-9999"
                 minLength="10"
                 pattern="[ 0-9\(\)-]{10,16}$"
                 value={phone}
@@ -90,8 +87,7 @@ function Contact(){
               <textarea
               name="message"
               cols="30"
-              rows="5"
-              placeholder="Digite a sua mensagem"
+              rows="7"
               required
               value={message}
               onChange={(e) => { setMessage(e.target.value);}}/>

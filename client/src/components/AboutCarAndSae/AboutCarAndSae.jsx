@@ -27,20 +27,16 @@ function AboutInfo() {
   }, []);
 
   return (
-    <div className={styles.BackgroundSection} style={{ backgroundImage: `url(${menu ? (aboutcar.map((d) => d.image.secure_url)) : (formulasae.map((d) => d.image.secure_url)) })` }}>
+    <div className={styles.BackgroundSection} id="infoCarAndSae" style={{ backgroundImage: `url(${menu ? (aboutcar.map((d) => d.image.secure_url)) : (formulasae.map((d) => d.image.secure_url)) })` }}>
       <section className="container" id={styles.aboutInfo}>
         <div className={styles.navContent}>
             <nav className={styles.NavbarAbout}>
                 <ul className={styles.NavbarList}>
                     <li>
-                        <a href='#' onClick={() => setMenu(true)} className="fontTitleSection">
-                            <h3>NOSSO CARRO</h3>
-                        </a>
+                      <h3 onClick={() => setMenu(!menu)} className="fontTitleSection">NOSSO CARRO</h3>
                     </li>
                     <li>
-                        <a href='#' onClick={() => setMenu(false)} className="fontTitleSection">
-                            <h3>FÓRMULA SAE</h3>
-                        </a>
+                      <h3 onClick={() => setMenu(!menu)} className="fontTitleSection">FÓRMULA SAE</h3>
                     </li>
                 </ul>
             </nav>

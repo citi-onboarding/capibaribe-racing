@@ -6,8 +6,8 @@ input{
   border-bottom: 6px solid #E5E5E5;
   width: 100%;
 
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 23px;
+  line-height: 26px;
   color: #E5E5E5;
 }
 
@@ -32,7 +32,7 @@ input{
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  height: 65rem;
+  height: 700px;
   border-radius: 3rem;
 
   background: linear-gradient(180deg, #4A1F1F 72.29%, rgba(31, 31, 31, 0.15) 100%);
@@ -85,24 +85,28 @@ input{
   display: flex;
   flex-direction: column;
   width: 80%;
+  gap: 15px;
 }
 
 .emailContainer{
   display: flex;
   flex-direction: column;
   width: 80%;
+  gap: 15px;
 }
 
 .phoneContainer{
   display: flex;
   flex-direction: column;
   width: 80%;
+  gap: 15px;
 }
 
 .topicContainer{
   display: flex;
   flex-direction: column;
   width: 80%;
+  gap: 15px;
 }
 
 .messageContainer{
@@ -110,6 +114,7 @@ input{
   gap: 1rem;
   flex-direction: column;
   width: 80%;
+  gap: 15px;
 }
 
 .messageContainer textarea {
@@ -142,13 +147,13 @@ input{
 @media (max-width: 800px){
   input{
     font-weight: normal;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 26px;
     width: 100%;
   }
 
   .background {
-    margin-bottom: 20%;
+    margin-bottom: 15%;
   }
 
   #contact{
@@ -156,7 +161,7 @@ input{
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    height: 650px;
+    height: 850px;
   }
 
   .title{
@@ -197,8 +202,33 @@ input{
   }
 
   .sentContainer button{
-    line-height: 15px;
     font-size: 18px;
+    line-height: 15px;
+  }
+}
+
+@media (width: 1024px) {
+  .background{
+    height: 50vh;
+    margin-top: 20%;
+    margin-bottom: 20%;
+  }
+}
+
+@media (width: 768px) {
+  .background{
+    margin-bottom: 0%;
+  }
+}
+
+@media (max-width: 360px) {
+  #contact{
+    height: 800px;
+  }
+
+  .background {
+    margin-top: 50%;
+    margin-bottom: 50%;
   }
 }
 
@@ -208,19 +238,7 @@ input{
   }
 
   .background {
+    margin-top: 50%;
     margin-bottom: 50%;
-  }
-}
-
-@media (max-width: 768px) {
-  .background{
-    margin-bottom: 0%;
-  }
-}
-
-@media (max-width: 1024px) {
-  .background{
-    margin-top: 0%;
-    margin-bottom: 0%;
   }
 }
