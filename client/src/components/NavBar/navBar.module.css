@@ -8,7 +8,7 @@
   height: 10vh;
   width: 100vw;
   z-index: 9999;
-  background: linear-gradient(270deg, #1F1F1F 16.56%, rgba(31, 31, 31, 0.7) 87.46%);
+  background: #1F1F1F;
 }
 
 .Menu {
@@ -42,6 +42,10 @@
   display: none;
 }
 
+.checkMode {
+  display: none;
+}
+
 @media  screen and (max-width: 1000px){
   .NavBarList li a{
     font-size: 1.8rem;
@@ -66,21 +70,28 @@
   .MenuResponsive {
     display: flex;
     flex-direction: column;
-    transition: all 0.5s ease-out;
-    position: fixed;
-    width: 80%;
-    right: 0;
+    position: absolute;
+    width: 75%;
     height: 62rem;
+    right: 0;
     top: 10vh;
     z-index: 0;
-    background: linear-gradient(270deg, #1F1F1F 16.56%, rgba(31, 31, 31, 0.7) 87.46%);
+    background: linear-gradient(to bottom, #1F1F1F, rgba(31, 31, 31, 0.7));
     border-radius: 0 0 0 5rem;
     justify-content: center;
+    transition: all .5s linear;
+  }
+
+  .checkMode:checked {
+    display: block;
   }
 
   .MenuResponsiveList {
     display: flex;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
     flex-direction: column;
+    right: 0;
     height: 100%;
     justify-content: space-evenly;
   }
@@ -89,6 +100,7 @@
     display: flex;
     text-decoration: none;
     justify-content: flex-end;
+    transition: all .5s linear;
     padding: 0 5rem;
     cursor: pointer;
     font-size: 2.74rem;
