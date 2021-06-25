@@ -13,6 +13,7 @@
 
 .Menu {
   display: flex;
+  position: relative;
   width: 100%;
   justify-content: space-between;
   z-index: 10;
@@ -55,10 +56,9 @@
 @media  screen and (max-width: 768px){
   .Bars {
     display: block;
-    position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 100%);
+    transform: translate(-25%, 25%);
     cursor: pointer;
   }
 
@@ -80,10 +80,6 @@
     border-radius: 0 0 0 5rem;
     justify-content: center;
     transition: all .5s linear;
-  }
-
-  .checkMode:checked {
-    display: block;
   }
 
   .MenuResponsiveList {

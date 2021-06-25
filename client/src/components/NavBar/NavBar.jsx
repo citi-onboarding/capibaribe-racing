@@ -26,12 +26,11 @@ function NavBar() {
             <li><a href="#contactUs">Contato</a></li>
           </ul>
 
-          <input type="checkbox" className={styles.checkMode} id="check"/>
           <div className={styles.Bars} onClick={() => setMenu(!menu)}>
             {menu ?
-            (<label htmlFor={styles.check}><img src={Sair} alt="Sair" /></label>)
+            (<img src={Sair} alt="Sair" />)
             :
-            (<label htmlFor={styles.check}><img src={MenuHamb} alt="Hamburguer Menu" /></label>)}
+            (<img src={MenuHamb} alt="Hamburguer Menu" />)}
           </div>
         </nav>
         {menu ? null :
