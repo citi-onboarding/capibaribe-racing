@@ -1,0 +1,12 @@
+{
+  "name": "capibariib-e racing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:capibariberacing/capibaribe-racing.git",
+  "author": "Arthur <abm5@cin.ufpe.br",
+  "license": "MIT",
+  "scripts": {
+    "install": "cd ./client && npm install && cd ../server && npm install",
+    "start": "cd ./client && npm run server && cd ../server && node index.js"
+  }
+}
