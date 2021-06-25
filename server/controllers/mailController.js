@@ -5,23 +5,16 @@ const sendMail = async (req, res) => {
   try {
     const { name, email, phone, topic, message } = req.body;
 
-    const body = `
-    Nome: ${name}
+    const body = `Nome: ${name}
     Email: ${email}
     Telefone: ${phone}
     Assunto: ${topic}
-    Mensagem: ${message}
-    `;
+    Mensagem: ${message}`;
 
     await mailServer({
-      destinationUser: 'arthurmedeiros32@gmail.com',
+      destinationUser: process.env.EMAILTO,
       subjectText: topic,
-      htmlOption:`
-      <p> Nome: ${name} </p>
-      <p> Email: ${email} </p>
-      <p> Telefone: ${phone} </p>
-      <p> Assunto: ${topic} </p>
-      <p> Mensagem: ${message} </p>`,
+      htmlOption: body,
     });
 
     res.status(200).send("Email sent")

@@ -13,7 +13,7 @@ function Contact(){
     try {
       e.preventDefault();
 
-      await apiAxios.post('contact', {name, email, phone, topic, message})
+      await apiAxios.post('sendEmail', {name, email, phone, topic, message})
       alert("Mensagem enviado com sucesso");
     } catch (error) {
       console.log(error);
