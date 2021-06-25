@@ -102,10 +102,6 @@ input[type=checkbox]:checked {
     transition: all .5s linear;
   }
 
-  .checkMode:checked {
-    display: block;
-  }
-
   .MenuResponsiveList {
     display: flex;
     transition: all 0.5s ease-in-out;

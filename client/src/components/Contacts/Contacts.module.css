@@ -1,0 +1,244 @@
+input{
+  background: none;
+  resize: none;
+  outline: none;
+  border: none;
+  border-bottom: 6px solid #E5E5E5;
+  width: 100%;
+
+  font-size: 23px;
+  line-height: 26px;
+  color: #E5E5E5;
+}
+
+.p { /* font do p */
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 26px;
+  color: #BDBDBD;
+}
+
+.background {
+  margin-top: 7%;
+  margin-bottom: 7%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  height: 700px;
+  border-radius: 3rem;
+
+  background: linear-gradient(180deg, #4A1F1F 72.29%, rgba(31, 31, 31, 0.15) 100%);
+}
+
+.title {
+  display: flex;
+  padding-top: 50px;
+  padding-left: 50px;
+
+  font-size: 48px;
+  line-height: 59px;
+  color: #BDBDBD;
+}
+
+.subTitle{
+  display: flex;
+  padding-left: 50px;
+
+  font-family: Montserrat;
+  line-height: 26px;
+  font-size: 25px;
+  color: #BDBDBD;
+}
+
+.contactList{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+
+.contactLeft{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+
+.contactRight{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+
+.nameContainer{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 15px;
+}
+
+.emailContainer{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 15px;
+}
+
+.phoneContainer{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 15px;
+}
+
+.topicContainer{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 15px;
+}
+
+.messageContainer{
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  width: 80%;
+  gap: 15px;
+}
+
+.messageContainer textarea {
+  background: none;
+  resize: none;
+  outline: none;
+  border: none;
+
+  border-bottom: 6px solid #E5E5E5;
+  border-left: 6px solid #E5E5E5;
+  border-right: 6px solid #E5E5E5;
+  width: 100%;
+
+  font-family: "Montserrat";
+  font-size: 18px;
+  line-height: 20px;
+  color: #E5E5E5;
+}
+
+.sentContainer button{
+  width: 28.8rem;
+  height: 6.3rem;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  background: #FFD31A;
+}
+
+@media (max-width: 800px){
+  input{
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    width: 100%;
+  }
+
+  .background {
+    margin-bottom: 15%;
+  }
+
+  #contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    height: 850px;
+  }
+
+  .title{
+    padding: 0;
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .subTitle{
+    padding: 0 20px 0 20px;
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+  .contactList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .contactRight{
+    justify-self: center;
+    align-items: center;
+  }
+
+  .messageContainer textarea {
+    width: 100%;
+  }
+
+  .sentContainer button{
+    font-size: 18px;
+    line-height: 15px;
+  }
+}
+
+@media (width: 1024px) {
+  .background{
+    height: 50vh;
+    margin-top: 20%;
+    margin-bottom: 20%;
+  }
+}
+
+@media (width: 768px) {
+  .background{
+    margin-bottom: 0%;
+  }
+}
+
+@media (max-width: 360px) {
+  #contact{
+    height: 800px;
+  }
+
+  .background {
+    margin-top: 50%;
+    margin-bottom: 50%;
+  }
+}
+
+@media (max-width: 320px) {
+  #contact{
+    height: 800px;
+  }
+
+  .background {
+    margin-top: 50%;
+    margin-bottom: 50%;
+  }
+}
