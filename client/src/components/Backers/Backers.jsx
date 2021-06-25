@@ -93,7 +93,7 @@ function Backers () {
           </Slider>
         </div>
 
-        <article className="backGroundBordo">
+        <article className={`backGroundBordo ${styles.supportUs}`}>
           <h2>Nos Apoie</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio,
           </p>

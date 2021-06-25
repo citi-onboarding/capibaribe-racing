@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: space-evenly;
   height: 100vh;
+  min-height: 850px;
   padding-top: 15vh;
   padding-bottom: 2rem;
 }
@@ -35,12 +36,6 @@
   transition: all 0.8s ease-in-out;
   margin: 0;
 }
-
-/*.slick-list .slick-track {
-  opacity: 1;
-  transform: translate3d(-1221px, 0px, 0px);
-  width: 1280px !important;
-}*/
 
 .Card {
   display: flex;
@@ -83,7 +78,7 @@
 }
 
 
-article {
+.supportUs {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,7 +89,7 @@ article {
   gap: 4rem;
 }
 
-article p {
+.supportUs p {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,7 +98,7 @@ article p {
 }
 
 @media (max-width: 768px){
-  article {
+  .supportUs {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
