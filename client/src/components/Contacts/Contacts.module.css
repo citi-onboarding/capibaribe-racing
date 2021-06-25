@@ -25,6 +25,7 @@ input{
   display: flex;
   align-items: center;
   width: 100%;
+  padding-top: 10rem;
   height: 100vh;
 }
 
@@ -34,7 +35,6 @@ input{
   gap: 5rem;
   height: 700px;
   border-radius: 3rem;
-
   background: linear-gradient(180deg, #4A1F1F 72.29%, rgba(31, 31, 31, 0.15) 100%);
 }
 

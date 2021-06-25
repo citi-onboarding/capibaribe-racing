@@ -5,6 +5,7 @@
   justify-content: space-between;
   gap:3rem;
   height: 100vh;
+  min-height: 850px;
 }
 
 .BackgroundSection {
@@ -116,23 +117,4 @@
   }
 }
 
-@media (max-width: 550px) {
-  h2 {
-    font-size: 4.5rem !important;
-  }
 
-  h3 {
-    font-size: 2.7rem !important;
-  }
-}
-
-
-@media (max-width: 375px) {
-  h2 {
-    font-size: 4rem !important;
-  }
-
-  h3 {
-    font-size: 2.4rem !important;
-  }
-}

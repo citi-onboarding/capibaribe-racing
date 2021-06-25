@@ -23,7 +23,7 @@ function Contact(){
 
 
   return(
-    <div className={styles.background} id={styles.background}>
+    <div className={styles.background} id="SectionContact">
 
       <section id={styles.contact} className="container backGroundBordo">
 
