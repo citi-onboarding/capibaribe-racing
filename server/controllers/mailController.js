@@ -14,7 +14,11 @@ const sendMail = async (req, res) => {
     await mailServer({
       destinationUser: process.env.EMAILTO,
       subjectText: topic,
-      htmlOption: body,
+      htmlOption:`<p> Nome: ${name} </p>
+      <p> Telefone: ${phone} </p>
+      <p> Email: ${email} </p>
+      <p> Assunto: ${topic} </p>
+      <p> Mensagem: ${message} </p>`,
     });
 
     res.status(200).send("Email sent")
