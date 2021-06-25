@@ -1,5 +1,5 @@
-@import "slick-carousel/slick/slick.css";
-@import "slick-carousel/slick/slick-theme.css";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 :root {
   --color-background-page: #1F1F1F;
@@ -86,7 +86,7 @@ h3 {
 }
 
 .backGroundBordo {
-  background: linear-gradient(180deg, var(--color-primary) 72.29%, #1F1F1F 100%);
+  background: linear-gradient(180deg, #4A1F1F 72.29%, #1F1F1F 100%);
 }
 
 @font-face{
@@ -98,10 +98,12 @@ h3 {
   html {
     font-size: 62.5%;
   }
+
 }
 
 @media (max-width: 480px) {
   html {
     font-size: 50%;
   }
+
 }
