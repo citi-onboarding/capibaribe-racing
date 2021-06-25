@@ -35,7 +35,7 @@ function NavBar() {
               <li><a href="#infoCarAndSae">Nosso Carro</a></li>
               <li><a href="#infoCarAndSae">Fórmula SAE</a></li>
               <li><a href="#Sponsors">Patrocinadores</a></li>
-              <li><a href="#contactUs">Contato</a></li>
+              <li><a href="#SectionContact">Contato</a></li>
             </ul>
 
             <div className={styles.Bars} onClick={() => setMenu(!menu)}>
@@ -52,8 +52,8 @@ function NavBar() {
               <li><a onClick={() => setMenu(!menu)} href="#banner">Sobre nós</a></li>
               <li><a onClick={() => setMenu(!menu)} href="#infoCarAndSae">Nosso Carro</a></li>
               <li><a onClick={() => setMenu(!menu)} href="#infoCarAndSae">Fórmula SAE</a></li>
-              <li><a onClick={() => setMenu(!menu)} href="#">Patrocinadores</a></li>
-              <li><a onClick={() => setMenu(!menu)} href="#">Contato</a></li>
+              <li><a onClick={() => setMenu(!menu)} href="#Sponsors">Patrocinadores</a></li>
+              <li><a onClick={() => setMenu(!menu)} href="#SectionContact">Contato</a></li>
             </ul>
 
             <div className={styles.MoreContent}>

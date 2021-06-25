@@ -14,7 +14,7 @@
 .Menu {
   display: flex;
   position: relative;
-  width: 100%;
+  width: 90vw;
   justify-content: space-between;
   z-index: 10;
 }
