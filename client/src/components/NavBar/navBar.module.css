@@ -5,14 +5,15 @@
   left: 50%;
   align-items: center;
   transform: translateX(-50%);
-  height: 10vh;
+  height: 10rem;
   width: 100vw;
   z-index: 9999;
-  background: #1F1F1F;
+  background: linear-gradient(180deg, #000000 0%, #292929 100%);
 }
 
 .Menu {
   display: flex;
+  position: relative;
   width: 100%;
   justify-content: space-between;
   z-index: 10;
@@ -42,9 +43,15 @@
   display: none;
 }
 
-.checkMode {
+
+input[type=checkbox] {
   display: none;
 }
+
+input[type=checkbox]:checked {
+  display: none;
+}
+
 
 @media  screen and (max-width: 1000px){
   .NavBarList li a{
@@ -56,10 +63,20 @@
   .Bars {
     display: block;
     position: absolute;
+    height: 4.1rem;
+    width: 4.1rem;
     top: 0;
     right: 0;
-    transform: translate(-100%, 100%);
+    transform: translate(0, 25%);
     cursor: pointer;
+  }
+
+  input[type=checkbox]:checked ~ #Navbar{
+    background: transparent;
+  }
+
+  input[type=checkbox]:checked ~ #Navbar .LogoNav img{
+    display: none;
   }
 
   .NavBarList {
@@ -72,13 +89,16 @@
     flex-direction: column;
     position: absolute;
     width: 75%;
-    height: 62rem;
+    height: 100vh;
     right: 0;
-    top: 10vh;
+    top: 0;
     z-index: 0;
-    background: linear-gradient(to bottom, #1F1F1F, rgba(31, 31, 31, 0.7));
-    border-radius: 0 0 0 5rem;
-    justify-content: center;
+    padding: 7rem 0 7rem 0;
+    background: linear-gradient(270deg, #1F1F1F 16.56%, rgba(31, 31, 31, 0.92) 87.46%);
+    border-radius: 30px 0px 0px 30px;
+    border-radius: 5rem 0 0 5rem;
+    justify-content: space-evenly;
+    align-items: flex-end;
     transition: all .5s linear;
   }
 
@@ -88,11 +108,10 @@
 
   .MenuResponsiveList {
     display: flex;
-    position: absolute;
     transition: all 0.5s ease-in-out;
     flex-direction: column;
     right: 0;
-    height: 100%;
+    height: 60%;
     justify-content: space-evenly;
   }
 
@@ -106,4 +125,43 @@
     font-size: 2.74rem;
     font-weight: 700;
   }
+
+  .MoreContent {
+    display: flex;
+    font-size: 2.6rem;
+    font-weight: 500;
+    background: #4A1F1F;
+    justify-content:center;
+    align-items: center;
+    width: 80%;
+    height: 10rem;
+    text-decoration: none;
+    cursor: pointer;
+    right: 0;
+    padding: 0 2rem;
+    border-radius: 3.2rem 0 0 3.2rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .MoreContent a{
+    position: relative;
+  }
+
+  .MoreContent a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.3rem;
+    background: #BDBDBD;
+    transition: all 1s ease;
+  }
+
+
+  .MoreContent a:hover::before {
+    width: 100%;
+
+  }
+
 }
