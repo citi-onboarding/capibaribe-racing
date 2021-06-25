@@ -1,20 +1,23 @@
+
 import {
+  AboutCarAndSae,
+  Contacts,
   NavBar,
   Banner,
-  AboutCarAndSae,
   Backers,
   Footer,
 } from './components/index.jsx';
 
 function App() {
   return (
-    <div>
+    <>
       <NavBar />
       <Banner />
       <AboutCarAndSae />
       <Backers />
+      <Contacts />
       <Footer />
-    </div>
+    </>
   );
 }
 

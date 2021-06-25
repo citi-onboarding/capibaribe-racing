@@ -8,6 +8,7 @@ const socialFooterController = require('../controllers/socialFooterController.js
 const bannerController = require('../controllers/bannerController');
 const aboutCarController = require('../controllers/aboutCarController.js');
 const backersController = require('../controllers/backersController.js');
+const mailController = require('../controllers/mailController.js');
 
 module.exports = (app) => {
   app.use(cors());
@@ -22,6 +23,8 @@ module.exports = (app) => {
   app.get('/api/social-networks', socialFooterController.getSocialNetworks);
   app.get('/api/about-car', aboutCarController.getAboutCar);
   app.get('/api/backers', backersController.getBackers);
+
+  app.post('/api/sendEmail', mailController);
 
   app.get('*', (req, res) => {
 		res.redirect('/');
