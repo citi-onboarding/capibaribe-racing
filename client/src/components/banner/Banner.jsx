@@ -7,7 +7,6 @@ function Banner(){
 
   const loadBanner = async () => {
     const res = await apiAxios.get('banner');
-    console.log(res.data[0].image.secure_url);
     setBanner(res.data);
   };
 

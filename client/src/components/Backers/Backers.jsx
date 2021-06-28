@@ -13,7 +13,6 @@ function Backers () {
     const loadBackers = async () => {
       const res = await apiAxios.get("backers");
       setBackers(res.data);
-      console.log(backers);
     };
 
     useEffect(() => {
@@ -44,7 +43,6 @@ function Backers () {
       arrows: true,
       infinite: true,
       lazyLoad: true,
-      centerMode: true,
       centerPadding: 0,
       slidesToShow: 3,
       slidesToScroll: 3,
@@ -55,7 +53,7 @@ function Backers () {
       beforeChange: (current, next) => setImageIndex(next),
       Slide: 'divoooooooo',
       autoplay: true,
-      autoplaySpeed: 1555555000,
+      autoplaySpeed: 7000,
       responsive: [
         {
           breakpoint: 1000,
