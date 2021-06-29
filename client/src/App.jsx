@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import {
   AboutCarAndSae,
   Contacts,
@@ -9,11 +10,12 @@ import {
 } from './components/index.jsx';
 
 function App() {
+  const [menu, setMenu] = useState(true);
   return (
     <>
-      <NavBar />
+      <NavBar menu={menu} setMenu={setMenu} />
       <Banner />
-      <AboutCarAndSae />
+      <AboutCarAndSae menu={menu} setMenu={setMenu} />
       <Backers />
       <Contacts />
       <Footer />
