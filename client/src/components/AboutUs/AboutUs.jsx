@@ -61,7 +61,7 @@ function AboutUs (){
     prevArrow: <PrevArrow />,
     beforeChange: (current, next) => setImageIndex(next),
     autoplay: true,
-    autoplaySpeed: 1555555000,
+    autoplaySpeed: 7000,
     responsive: [
       {
         breakpoint: 1000,
@@ -99,12 +99,16 @@ function AboutUs (){
             {values.map(({values, _id, name}, idx) => (
               <div className={idx === imageIndex ? `${styles.CarouselCards} ${styles.activeSlide}` : `${styles.CarouselCards}`}>
                 <div className={styles.Card}>
+
                   <img
                     src={values.icon.secure_url}
                     alt={'f'}
                   />
-                  <h3>{values.title}</h3>
+
+                  <h3 className={styles.titleCard}>{values.title}</h3>
+
                   <p>{values.description}</p>
+
                 </div>
               </div>
             ))}
