@@ -32,7 +32,7 @@ function NavBar( {menu, setMenu} ) {
             </div>
 
             <ul className={styles.NavBarList}>
-              <li><a href="#banner">Sobre nós</a></li>
+              <li><a href="#AboutUs">Sobre nós</a></li>
               <li onClick={() => {setMenu(true)}}><a href="#infoCarAndSae">Nosso Carro</a></li>
               <li onClick={() => {setMenu(false)}}><a href="#infoCarAndSae">Fórmula SAE</a></li>
               <li><a href="#Sponsors">Patrocinadores</a></li>
@@ -50,7 +50,7 @@ function NavBar( {menu, setMenu} ) {
           (<nav className={styles.MenuResponsive}>
 
             <ul className={styles.MenuResponsiveList} onClick={() => document.getElementById("check").checked = false}>
-              <li onClick={() => setMenuNav(!menuNav)}><a href="#banner">Sobre nós</a></li>
+              <li onClick={() => setMenuNav(!menuNav)}><a href="#AboutUs">Sobre nós</a></li>
               <li onClick={() => {setMenuNav(!menuNav); setMenu(true)}}><a href="#infoCarAndSae">Nosso Carro</a></li>
               <li onClick={() => {setMenuNav(!menuNav); setMenu(false)}}><a href="#infoCarAndSae">Fórmula SAE</a></li>
               <li onClick={() => setMenuNav(!menuNav)}><a href="#Sponsors">Patrocinadores</a></li>
