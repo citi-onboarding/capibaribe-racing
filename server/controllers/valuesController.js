@@ -1,6 +1,6 @@
 const keystone = require('keystone');
 
-const aboutUs = keystone.list('values');
+const values = keystone.list('values');
 
 module.exports = {
 

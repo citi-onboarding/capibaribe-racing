@@ -18,7 +18,7 @@ module.exports = (app) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
   });
 
-  app.get('/api/aboutUs', aboutUsController.getaboutUsController);
+  app.get('/api/aboutUs', aboutUsController.getAboutUsController);
   app.get('/api/about-formula-sae', aboutFormulaSaeController.getAboutFormulaSae);
   app.get('/api/banner', bannerController.getbannerController);
   app.get('/api/social-networks', socialFooterController.getSocialNetworks);

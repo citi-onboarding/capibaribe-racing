@@ -4,7 +4,7 @@ const aboutUs = keystone.list('about-us');
 
 module.exports = {
 
-  getaboutUsController (req, res) {
+  getAboutUsController (req, res) {
     aboutUs.model.find((err, items) => {
       if (err) {
         console.log(err);

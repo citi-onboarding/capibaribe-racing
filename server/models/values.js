@@ -4,7 +4,6 @@ const { Types } = keystone.Field;
 
 const values = new keystone.List('values',{
   label:'Valores',
-  autocreate: true,
   defaultColumns: 'name, Valores',
 });
 
