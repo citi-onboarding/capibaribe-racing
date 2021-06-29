@@ -33,6 +33,18 @@
   cursor: pointer;
 }
 
+.NavBarList li a {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.NavBarList li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: .3rem;
+  transition: all 0.3s ease-out;
+}
+
 .LogoNav {
   width: 6.2rem;
   height: 6.4rem;
@@ -43,7 +55,6 @@
   display: none;
 }
 
-
 input[type=checkbox] {
   display: none;
 }
@@ -51,6 +62,7 @@ input[type=checkbox] {
 input[type=checkbox]:checked {
   display: none;
 }
+
 
 
 @media  screen and (max-width: 1000px){
@@ -90,7 +102,7 @@ input[type=checkbox]:checked {
     position: absolute;
     width: 75%;
     height: 100vh;
-    right: 0;
+    right: -100%;
     top: 0;
     z-index: 0;
     padding: 7rem 0 7rem 0;
@@ -99,12 +111,17 @@ input[type=checkbox]:checked {
     border-radius: 5rem 0 0 5rem;
     justify-content: space-evenly;
     align-items: flex-end;
-    transition: all .5s linear;
+    transition: all .5s ease;
+  }
+
+  input[type=checkbox]:checked ~ #Navbar .MenuResponsive{
+    right: 0;
+    opacity: 1;
+    transition: all .5s ease;
   }
 
   .MenuResponsiveList {
     display: flex;
-    transition: all 0.5s ease-in-out;
     flex-direction: column;
     right: 0;
     height: 60%;
@@ -120,6 +137,10 @@ input[type=checkbox]:checked {
     cursor: pointer;
     font-size: 2.74rem;
     font-weight: 700;
+  }
+
+  .MenuResponsiveList li:hover {
+    text-decoration: underline;
   }
 
   .MoreContent {
