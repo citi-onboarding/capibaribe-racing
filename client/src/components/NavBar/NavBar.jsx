@@ -11,10 +11,11 @@ function NavBar( {menu, setMenu} ) {
   const [menuNav, setMenuNav] = useState(true);
   const [conteudos, setConteudos] = useState([]);
 
+  const [menuElementColor, setMenuElementColor] = useState(true);
+
   const loadConteudos = async () => {
     const res = await apiAxios.get("aboutUs");
     setConteudos(res.data);
-    console.log(res.data);
   };
 
   useEffect(() => {
@@ -27,7 +28,7 @@ function NavBar( {menu, setMenu} ) {
       <header className="fontNavbar" id={styles.Navbar}>
           <nav className={`container ${styles.Menu}`}>
             <div className={styles.LogoNav}>
-              <img src={logoCapibaNavbar} alt="Logo Capiba"/>
+              <a href="#"><img src={logoCapibaNavbar} alt="Logo Capiba"/></a>
             </div>
 
             <ul className={styles.NavBarList}>

@@ -158,6 +158,10 @@ input[type=checkbox]:checked {
     background: linear-gradient(270deg, rgba(255, 255, 255, 0.2) 90.56%, rgba(255, 255, 255, 0.2) 30.46%);
   }
 
+  .MenuResponsiveList li:hover {
+    text-decoration: underline;
+  }
+
   .MoreContent {
     display: flex;
     position: absolute;
