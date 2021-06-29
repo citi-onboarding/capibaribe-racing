@@ -3,8 +3,7 @@ import apiAxios from '../../services/api-axios.js';
 
 import styles from "./aboutCarAndSae.module.css";
 
-function AboutInfo() {
-  const [menu, setMenu] = useState(true);
+function AboutInfo( {menu, setMenu} ) {
 
   const [aboutcar, setAboutCar] = useState([]);
   const [formulasae, setAboutFormulaSae] = useState([]);
@@ -31,10 +30,10 @@ function AboutInfo() {
             <nav className={styles.NavbarAbout}>
                 <ul className={styles.NavbarList}>
                     <li>
-                      <h3 onClick={() => setMenu(!menu)} className="fontTitleSection">NOSSO CARRO</h3>
+                      <h3 onClick={() => setMenu(true)} className="fontTitleSection">NOSSO CARRO</h3>
                     </li>
                     <li>
-                      <h3 onClick={() => setMenu(!menu)} className="fontTitleSection">FÓRMULA SAE</h3>
+                      <h3 onClick={() => setMenu(false)} className="fontTitleSection">FÓRMULA SAE</h3>
                     </li>
                 </ul>
             </nav>

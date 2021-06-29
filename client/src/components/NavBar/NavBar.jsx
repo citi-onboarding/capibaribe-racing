@@ -7,8 +7,8 @@ import apiAxios from '../../services/api-axios.js';
 
 import styles from "./navBar.module.css";
 
-function NavBar() {
-  const [menu, setMenu] = useState(true);
+function NavBar( {menu, setMenu} ) {
+  const [menuNav, setMenuNav] = useState(true);
   const [conteudos, setConteudos] = useState([]);
 
   const [menuElementColor, setMenuElementColor] = useState(true);
@@ -32,29 +32,29 @@ function NavBar() {
             </div>
 
             <ul className={styles.NavBarList}>
-              <li><a href="#banner">Sobre nós</a></li>
-              <li><a href="#infoCarAndSae">Nosso Carro</a></li>
-              <li><a href="#infoCarAndSae">Fórmula SAE</a></li>
+              <li><a href="#AboutUs">Sobre nós</a></li>
+              <li onClick={() => {setMenu(true)}}><a href="#infoCarAndSae">Nosso Carro</a></li>
+              <li onClick={() => {setMenu(false)}}><a href="#infoCarAndSae">Fórmula SAE</a></li>
               <li><a href="#Sponsors">Patrocinadores</a></li>
               <li><a href="#SectionContact">Contato</a></li>
             </ul>
 
-            <div className={styles.Bars} onClick={() => setMenu(!menu)}>
-              {menu ?
+            <div className={styles.Bars} onClick={() => setMenuNav(!menuNav)}>
+              {menuNav ?
               (<label htmlFor="check"><img src={Sair} alt="Sair" /></label>)
               :
               (<label htmlFor="check"><img src={MenuHamb} alt="Hamburguer Menu" /></label>)}
             </div>
           </nav>
-          {menu ? null :
+          {menuNav ? null :
           (<nav className={styles.MenuResponsive}>
 
             <ul className={styles.MenuResponsiveList} onClick={() => document.getElementById("check").checked = false}>
-              <li><a onClick={() => setMenu(!menu)} href="#banner">Sobre nós</a></li>
-              <li><a onClick={() => setMenu(!menu)} href="#infoCarAndSae">Nosso Carro</a></li>
-              <li><a onClick={() => setMenu(!menu)} href="#infoCarAndSae">Fórmula SAE</a></li>
-              <li><a onClick={() => setMenu(!menu)} href="#Sponsors">Patrocinadores</a></li>
-              <li><a onClick={() => setMenu(!menu)} href="#SectionContact">Contato</a></li>
+              <li onClick={() => setMenuNav(!menuNav)}><a href="#AboutUs">Sobre nós</a></li>
+              <li onClick={() => {setMenuNav(!menuNav); setMenu(true)}}><a href="#infoCarAndSae">Nosso Carro</a></li>
+              <li onClick={() => {setMenuNav(!menuNav); setMenu(false)}}><a href="#infoCarAndSae">Fórmula SAE</a></li>
+              <li onClick={() => setMenuNav(!menuNav)}><a href="#Sponsors">Patrocinadores</a></li>
+              <li onClick={() => setMenuNav(!menuNav)}><a href="#SectionContact">Contato</a></li>
             </ul>
 
             <div className={styles.MoreContent}>
