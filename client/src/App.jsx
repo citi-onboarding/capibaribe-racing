@@ -1,11 +1,12 @@
 
 import { useState } from 'react';
 import {
-  AboutCarAndSae,
-  Contacts,
   NavBar,
   Banner,
+  AboutUs,
+  AboutCarAndSae,
   Backers,
+  Contacts,
   Footer,
 } from './components/index.jsx';
 
@@ -15,6 +16,7 @@ function App() {
     <>
       <NavBar menu={menu} setMenu={setMenu} />
       <Banner />
+      <AboutUs />
       <AboutCarAndSae menu={menu} setMenu={setMenu} />
       <Backers />
       <Contacts />

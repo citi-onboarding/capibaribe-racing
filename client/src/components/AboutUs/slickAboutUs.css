@@ -1,0 +1,19 @@
+.slick-initialized {
+  height: 100%;
+  position: relative !important;
+}
+
+.slick-list {
+  margin: 0 -8rem !important;
+}
+.slick-slide>div {padding: 0 50px !important;}
+
+@media (max-width: 768px){
+  .slick-initialized {
+    height: 100% !important;
+  }
+
+  .slick-slide>div {
+    height: 100%;
+  }
+}
