@@ -1,0 +1,145 @@
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+.aboutUsSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  height: 100vh;
+  min-height: 1100px;
+}
+
+.aboutUsModel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7%;
+  margin-bottom: 7%;
+  gap: 62px;
+}
+
+.title {
+  font-style: normal;
+  font-size: 4.8rem;
+  line-height: 5.9rem;
+}
+
+.description {
+  width: 70%;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  text-align: center;
+}
+
+.content {
+  width: 48.6rem;
+  height: 5.4rem;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 3.7rem;
+  color: #E5E5E5;
+
+  background: #4A1F1F;
+  border: none;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  border-radius: 1.8rem;
+}
+
+.Carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  height: 100vh;
+  padding: 3rem;
+}
+
+.CarouselCards img{
+  width: 15rem;
+  height: auto;
+  margin: 0 auto;
+  z-index: 5;
+}
+
+.CarouselCards {
+  display: flex !important;
+  align-items: center;
+  width: 100% !important;
+  justify-content: center;
+  transform: scale(1);
+  transition: all 0.8s ease-in-out;
+  margin: 0;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30.4rem;
+  height: 36rem;
+  gap: 3rem;
+  background: linear-gradient(180deg, #4A1F1F 70.21%, #1F1F1F 100%);
+  border-radius: 3rem;
+  padding: 2.5rem;
+}
+
+.Card img {
+  width: auto;
+  height: 20%;
+  overflow: hidden;
+}
+
+.card h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700 !important;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  color: #BDBDBD;
+}
+
+.card p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 2.6rem;
+}
+
+.arrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.arrow svg {
+  width: 3.6rem !important;
+}
+
+.Next {
+  top: 100%;
+  margin: 0 10rem;
+}
+
+.Prev {
+  top: 100%;
+  margin: 0 -10rem;
+}
+
+@media (max-width: 768px){
+  .content {
+    display: none;
+  }
+  .card{
+    gap: 1.5rem !important;
+  }
+}

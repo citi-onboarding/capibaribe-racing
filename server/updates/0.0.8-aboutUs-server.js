@@ -7,20 +7,5 @@ exports = module.exports = (done) => {
 		title: ' ',
     description: ' ',
     content: ' ',
-
-    vision: {
-      title: ' ',
-      description: ' ',
-    },
-
-    mission: {
-      title: ' ',
-      description: ' ',
-    },
-
-    values: {
-      title: ' ',
-      description: ' ',
-    },
 	}).save(done);
 };

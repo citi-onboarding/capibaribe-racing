@@ -1,11 +1,11 @@
 const keystone = require('keystone');
 
-const aboutUs = keystone.list('about-us');
+const values = keystone.list('values');
 
 module.exports = {
 
-  getAboutUsController (req, res) {
-    aboutUs.model.find((err, items) => {
+  getValues (req, res) {
+    values.model.find((err, items) => {
       if (err) {
         console.log(err);
         res.status(500).send('DB Error');
