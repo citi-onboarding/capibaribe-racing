@@ -16,7 +16,6 @@ function Footer () {
     const loadFooter = async () => {
       const res = await apiAxios.get("social-networks");
       setFooter(res.data);
-      console.log(res);
     };
 
     useEffect(() => {

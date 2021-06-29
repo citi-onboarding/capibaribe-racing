@@ -12,13 +12,11 @@ function AboutInfo() {
   const loadAboutCar = async () => {
     const res = await apiAxios.get("about-car");
     setAboutCar(res.data);
-    console.log(res.data);
   };
 
   const loadAboutFormulaSae = async () => {
     const res = await apiAxios.get("about-formula-sae");
     setAboutFormulaSae(res.data);
-    console.log(res.data[0].image);
   };
 
   useEffect(() => {
