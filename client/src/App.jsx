@@ -1,10 +1,11 @@
 
 import {
-  AboutCarAndSae,
-  Contacts,
   NavBar,
   Banner,
+  AboutUs,
+  AboutCarAndSae,
   Backers,
+  Contacts,
   Footer,
 } from './components/index.jsx';
 
@@ -13,6 +14,7 @@ function App() {
     <>
       <NavBar />
       <Banner />
+      <AboutUs />
       <AboutCarAndSae />
       <Backers />
       <Contacts />
