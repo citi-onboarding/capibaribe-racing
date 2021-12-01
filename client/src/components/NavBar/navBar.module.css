@@ -160,6 +160,9 @@ input[type=checkbox]:checked {
 
   .MenuResponsiveList li:hover {
     text-decoration: underline;
+    border-right: 5px solid #4A1F1F;
+    z-index: 60;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.2) 90.56%, rgba(255, 255, 255, 0.2) 30.46%);
   }
 
   .MoreContent {

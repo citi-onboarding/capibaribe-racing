@@ -16,6 +16,8 @@
   "bugs": {
     "url": "https://github.com/Jorrmungandr/keystone-admin/issues"
   },
+
+
   "homepage": "https://github.com/Jorrmungandr/keystone-admin#readme",
   "dependencies": {
     "@babel/preset-react": "^7.6.3",
@@ -26,6 +28,7 @@
     "nodemailer": "^6.6.2",
     "underscore": "^1.11.0"
   },
+
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
@@ -35,3 +38,5 @@
     "webpack-cli": "^3.3.9"
   }
 }
+
+
